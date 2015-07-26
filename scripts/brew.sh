@@ -52,6 +52,25 @@ brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
 
 # Install other useful binaries.
+brew install aredridel/iojs/iojs
+brew install --with-openssl ffmpeg
+brew install --HEAD tox/tox/qtox
+brew install wget
+brew install avidemux
+brew install htop-osx
+brew install python3
+brew install mpv
+brew install cmus
+brew install shellcheck
+brew install rogue
+brew install ppsspp
+brew install openttd
+brew install freeciv
+brew install dwarf-fortress
+brew install chocolate-doom
+brew install cataclysm
+brew install youtube-dl
+
 brew install ack
 brew install android-sdk
 brew install autoconf
@@ -69,11 +88,7 @@ brew install icu4c
 brew install libpng
 brew install libsass
 brew install phantomjs
-brew install homebrew/php/php53
-# brew install homebrew/php/php53-xdebug
-brew install homebrew/php/php53-jsmin
-brew install homebrew/php/php53-xhprof
-brew install homebrew/php/php-cs-fixer
+
 brew install qcachegrind
 brew install rename
 # brew install solr36

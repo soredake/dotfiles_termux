@@ -1,24 +1,25 @@
 #!/usr/bin/env bash
 
 # Install Atom packages.
-apm install atom-beautify
-apm install autocomplete-plus
+apm install advanced-new-file
+apm install advanced-open-file
 apm install color-picker
 apm install dash
+apm install devdocs
 apm install editorconfig
+apm install enhanced-tabs
+apm install file-icons
 apm install git-control
-apm install git-tab-status
-apm install isotope-ui
+apm install lines
 apm install linter
-apm install linter-jshint
-apm install linter-php
-apm install linter-phpcs
-apm install linter-scss-lint
-apm install local-history
+apm install linter-eslint
+apm install linter-shellcheck
+apm install linter-stylint
+apm install merge-conflicts
 apm install minimap
 apm install minimap-git-diff
-apm install monokai
 apm install project-manager
-apm install seti-syntax
-apm install seti-ui
+apm install react-snippets
+apm install sort-lines
+apm install stylus
 apm install todo-show

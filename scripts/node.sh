@@ -8,6 +8,8 @@ sudo -v
 # Keep-alive: update existing `sudo` timestamp until we're done.
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+npm install -g peerflix
+npm install -g caniuse
 sudo npm install -g bower
 sudo npm install -g bower-update
 #sudo npm install -g browserify
