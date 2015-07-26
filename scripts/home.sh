@@ -12,6 +12,9 @@ source dotfiles.sh
 # Install Homebrew.
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+# Prevent messing up permissions
+sudo chown -R $USER /usr/local
+
 # Install Homebrew packages.
 source brew.sh
 
@@ -29,15 +32,6 @@ source node.sh
 
 # Install Ruby gems.
 source ruby.sh
-
-# Install Composer packages.
-source composer.sh
-
-# Install PHP extensions.
-source pecl.sh
-
-# Add PHP extensions to MAMP.
-source mamp.sh
 
 # Install Atom plugins.
 source node.sh

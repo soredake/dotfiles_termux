@@ -22,68 +22,65 @@ brew upgrade brew-cask
 brew tap caskroom/versions
 
 # Install apps.
-brew cask install alfred
-brew cask install android-studio
-brew cask install atom
-brew cask install appzapper
-brew cask install battle-net
-brew cask install bettertouchtool
-brew cask install boom
-brew cask install ccleaner
-brew cask install cocoarestclient
-brew cask install dash
-brew cask install dosbox
-brew cask install dropbox
-brew cask install firefox
-brew cask install flash-player
-brew cask install gitter
-brew cask install google-chrome
-brew cask install google-chrome-canary
+# brew cask install gitter
 # brew cask install google-drive
 # brew cask install google-earth
+# brew cask install java
+# brew cask install kaleidoscope
+# brew cask install lastfm
+# brew cask install miro-video-converter
+# brew cask install moom
+# brew cask install multidoge
+# brew cask install vienna
+#brew cask install alfred
+#brew cask install battle-net
+#brew cask install ccleaner
+#brew cask install screenflow
+brew cask install --appdir=/Applications megasync
+brew cask install appzapper
+brew cask install atom
+brew cask install bettertouchtool
+brew cask install dash
+brew cask install dnscrypt
+brew cask install dosbox
+brew cask install double-commander
+brew cask install dropbox
+brew cask install dupeguru
+brew cask install dupeguru-me
+brew cask install dupeguru-pe
+brew cask install firefox-ru
+brew cask install flash-player
+brew cask install gimp
 brew cask install harvest
-brew cask install hipchat
 brew cask install imagealpha
 brew cask install imageoptim
 brew cask install iterm2
-brew cask install java
-brew cask install joinme
-brew cask install kaleidoscope
-# brew cask install knox
-brew cask install lastfm
-brew cask install libreoffice
-# brew cask install linkinus
-brew cask install macdown
-brew cask install mamp
-# brew cask install miro-video-converter
-brew cask install minco
+brew cask install keka
+brew cask install libreoffice-ru
 brew cask install mmex
-brew cask install moom
-brew cask install multidoge
-# brew cask install mysqlworkbench
-brew cask install onepassword
+brew cask install musicbrainz-picard
+brew cask install mypaint
+brew cask install noizio
+brew cask install obs
+brew cask install openemu
 brew cask install paragon-ntfs
-# brew cask install pref-setter
-brew cask install phpstorm
 brew cask install pongsaver
-brew cask install screenflow
-brew cask install sequel-pro
+brew cask install popcorn-time
+brew cask install qbittorrent
+brew cask install retroarch
+brew cask install shiftit
+brew cask install shotcut
 brew cask install skype
 brew cask install smcfancontrol
-# brew cask install sparrow
-# brew cask install steam
-brew cask install sublime-text
-brew cask install torbrowser
-brew cask install tower
+brew cask install soundflower
+brew cask install steam
+brew cask install thunderbird-ru
+brew cask install torbrowser-ru
 brew cask install transmission
-brew cask install transmit
-# brew cask install truecrypt
-brew cask install unity-web-player
 brew cask install vagrant
-# brew cask install vienna
+brew cask install veracrypt
 brew cask install virtualbox
-brew cask install vlc
-# brew cask install yandex
+brew cask install xquartz
 
 # Quick Look plugins.
 brew cask install qlcolorcode

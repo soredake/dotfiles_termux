@@ -6,7 +6,7 @@
 
 ## Usage
 
-* Clone this repo somewhere: `git clone https://github.com/alexweber/home.git ~/Projects/home`
+* Clone this repo somewhere: `git clone https://github.com/fenque/home.git ~/Projects/home`
 * To install run `./dotfiles.sh`
 * To update the dotfiles run `git pull && ./dotfiles.sh`
 * Alternatively, if you're setting up a fresh OS X install, use the `scripts/home.sh` script, which will set everything up and run all of the other scripts for you
@@ -24,12 +24,9 @@ The following scripts are available in the "scripts" folder:
 * `atom.sh` Install Atom Editor packages
 * `brew.sh` Install command-line tools using Homebrew
 * `cask.sh` Install native OS X apps using Homebrew Cask
-* `composer.sh` Install global Composer PHP packages
 * `home.sh` __Wrapper around the all of the other scripts; use this to set up a new Mac__
-* `mamp.sh` Add PHP extensions to MAMP
 * `node.sh` Install global Node.js packages
 * `osx.sh` Sets up sensible defaults for OS X settings and a couple other cool tweaks
-* `pecl.sh` Install global PHP extensions via PECL
 * `python.sh` Install global Python packages via Pip
 * `ruby.sh` Install global Ruby gems
 
