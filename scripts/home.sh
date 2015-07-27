@@ -1,10 +1,16 @@
 #!/usr/bin/env bash
 
 # Ask for the administrator password upfront.
-# sudo -v
+sudo -v
 
 # Keep-alive: update existing `sudo` timestamp until we're done.
-# while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+# Install xcode command line tools
+xcode-select --install
+
+# Accept xcode command line tools LICENSE
+sudo xcodebuild -license
 
 # Setup dotfiles.
 source dotfiles.sh

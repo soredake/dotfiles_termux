@@ -78,7 +78,7 @@ brew cask install thunderbird-ru
 brew cask install torbrowser-ru
 brew cask install transmission
 brew cask install vagrant
-brew cask install veracrypt
+brew cask install fenque/veracrypt/veracrypt
 brew cask install virtualbox
 brew cask install xquartz
 

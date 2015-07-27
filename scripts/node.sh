@@ -10,13 +10,12 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 npm install -g peerflix
 npm install -g caniuse
-sudo npm install -g bower
-sudo npm install -g bower-update
+#sudo npm install -g bower
+#sudo npm install -g bower-update
 #sudo npm install -g browserify
-sudo npm install -g cordova
-sudo npm install -g eslint
-sudo npm install -g firebase-tools
-sudo npm install -g fixmyjs
+#sudo npm install -g cordova
+npm install -g eslint
+#npm install -g firebase-tools
 # sudo npm install -g gitbanner
 sudo npm install -g grunt-cli
 # sudo npm install -g gitgoodies
