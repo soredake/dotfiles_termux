@@ -22,9 +22,6 @@ alias .....="cd ../../../.."
 # I <3 u cask.
 alias cask='brew cask'
 
-# I <3 u sublime.
-alias s="subl"
-
 # Shortcut to edit hosts file.
 alias hosts='sudo $EDITOR /etc/hosts'
 
@@ -70,7 +67,7 @@ alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date
 
 # Get OS X Software Updates, update installed Ruby gems, Homebrew, npm, and their
 # installed packages.
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; sudo npm update -g; sudo gem update --system; sudo gem update; composer self-update; composer global update; sudo pecl update; pipudate;'
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; sudo npm update -g; pipudate;'
 
 # What's my IP address.
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -100,15 +97,6 @@ alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v exten
 
 # Lock the screen (when going AFK).
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
-
-# Open with Photoshop.
-alias photoshop='open -a "Adobe Photoshop CS6"'
-
-# Open with PHPStorm.
-alias phs='pstorm'
-
-# Open Chrome Canary with web security disabled to overcome CORS issues for local dev.
-alias corsdev="open -n -a /opt/homebrew-cask/Caskroom/google-chrome-canary/latest/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary --args --disable-web-security"
 
 # Currency conversions.
 alias usd="cconv 1 usd brl"

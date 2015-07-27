@@ -28,7 +28,6 @@ The following scripts are available in the "scripts" folder:
 * `node.sh` Install global Node.js packages
 * `osx.sh` Sets up sensible defaults for OS X settings and a couple other cool tweaks
 * `python.sh` Install global Python packages via Pip
-* `ruby.sh` Install global Ruby gems
 
 ## Help
 

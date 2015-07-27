@@ -42,6 +42,12 @@ brew install bash
 brew uninstall bash-completion
 brew install homebrew/versions/bash-completion2
 
+
+# Tap some repos
+brew tap Homebrew/homebrew-python
+brew tap Homebrew/homebrew-games
+brew tap casidiablo/custom
+
 # Install `wget` with IRI support.
 brew install wget --with-iri
 
@@ -59,7 +65,7 @@ brew install wget
 brew install avidemux
 brew install htop-osx
 brew install python3
-brew install mpv
+brew install mpv-player/mpv/mpv
 brew install cmus
 brew install shellcheck
 brew install rogue
@@ -101,9 +107,13 @@ brew install zopfli
 # main formulae list to fix gh-19.
 brew install https://raw.github.com/Homebrew/homebrew-dupes/master/rsync.rb
 
-# Install Node.js. Note: this installs `npm` too, using the recommended
-# installation method.
-brew install node
+# Link a some formulas
+brew linkapps mpv avidemux ppsspp openttd
+
+# Fix htop permissions
+cd /usr/local/Cellar/htop-osx/0.8.2.7/bin/
+chmod 6555 htop
+sudo chown root htop
 
 # Remove outdated versions from the cellar.
 brew cleanup
