@@ -1,12 +1,12 @@
-# Home (aka: Alex's dotfiles)
+# Home (aka: susekaboss's dotfiles)
 
 > These are my dotfiles. There are many like them, but these ones are mine.
 
-![Screenshot of Alex’s shell prompt](http://i.imgur.com/MTLif8c.jpg)
+![Screenshot of susekaboss’s shell prompt](http://i.imgur.com/MTLif8c.jpg)
 
 ## Usage
 
-* Clone this repo somewhere: `git clone https://github.com/fenque/home.git ~/Projects/home`
+* Clone this repo somewhere: `git clone https://github.com/fenque/home.git ~/Documents/github/home`
 * To install run `./dotfiles.sh`
 * To update the dotfiles run `git pull && ./dotfiles.sh`
 * Alternatively, if you're setting up a fresh OS X install, use the `scripts/home.sh` script, which will set everything up and run all of the other scripts for you
@@ -37,7 +37,7 @@ The following scripts are available in the "scripts" folder:
 ## Credits
 
 Most of this was based on work by these awesome people:
-
+* Alex Weber https://github.com/alexweber/home
 * Mathias Bynens https://github.com/mathiasbynens/dotfiles
 * Jan Moesen https://github.com/janmoesen/tilde
 * Paul Irish https://github.com/paulirish/dotfiles

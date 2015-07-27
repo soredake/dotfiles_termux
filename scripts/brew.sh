@@ -77,6 +77,7 @@ brew install chocolate-doom
 brew install cataclysm
 brew install youtube-dl
 
+# TODO: update this
 brew install ack
 brew install android-sdk
 brew install autoconf
