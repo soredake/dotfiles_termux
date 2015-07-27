@@ -37,7 +37,7 @@ The following scripts are available in the "scripts" folder:
 ## Credits
 
 Most of this was based on work by these awesome people:
-* Alex Weber https://github.com/alexweber/home
+* __Alex Weber https://github.com/alexweber/home__
 * Mathias Bynens https://github.com/mathiasbynens/dotfiles
 * Jan Moesen https://github.com/janmoesen/tilde
 * Paul Irish https://github.com/paulirish/dotfiles
