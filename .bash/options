@@ -48,16 +48,16 @@ if type _git &> /dev/null && [ -f /usr/local/etc/bash_completion.d/git-completio
 fi;
 
 # If we have found drush.complete.sh, then source it.
-if [ -f "$HOME/.composer/vendor/drush/drush/drush.complete.sh" ] ; then
-  source "$HOME/.composer/vendor/drush/drush/drush.complete.sh"
-fi
+#if [ -f "$HOME/.composer/vendor/drush/drush/drush.complete.sh" ] ; then
+#  source "$HOME/.composer/vendor/drush/drush/drush.complete.sh"
+#fi
 
 # Completion for Homebrew.
 source `brew --repository`/Library/Contributions/brew_bash_completion.sh
 
-# NVM.
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+# NVM. @TODO do something on this
+#export NVM_DIR=~/.nvm
+#source $(brew --prefix nvm)/nvm.sh
 
 # Completion for WP CLI.
 source "$HOME/.init/wp-completion.sh"
