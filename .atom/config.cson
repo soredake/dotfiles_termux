@@ -3,43 +3,7 @@
     showOnStartup: false
   core:
     followSymlinks: true
-    disabledPackages: [
-      "language-ruby"
-      "language-ruby-on-rails"
-      "language-python"
-      "language-perl"
-      "language-objective-c"
-      "language-less"
-      "language-java"
-      "language-go"
-      "language-clojure"
-      "language-c"
-      "language-toml"
-      "open-on-github"
-      "spell-check"
-      "styleguide"
-      "welcome"
-      "archive-view"
-      "language-mustache"
-      "deprecation-cop"
-      "language-coffee-script"
-      "language-csharp"
-      "timecop"
-      "language-make"
-      "metrics"
-      "feedback"
-      "autocomplete"
-      "language-source"
-      "language-yaml"
-      "linter-php"
-      "linter-scss-lint"
-      "linter-phpcs"
-    ]
-    themes: [
-      "seti-ui"
-      "one-dark-syntax"
-    ]
-    projectHome: "~/Projects"
+    projectHome: "~/Documents/github"
     audioBeep: false
     excludeVcsIgnoredPaths: false
     ignoredNames: [
@@ -55,43 +19,24 @@
     statusBar: "Show error of the selected line"
     lintOnChange: false
     clearOnChange: true
-    subtleLinterErrors: [
-      "phpcs"
-    ]
     showErrorPanel: false
   editor:
     invisibles: {}
     preferredLineLength: 120
     showIndentGuide: true
-  "linter-jshint":
-    jshintExecutablePath: "/usr/local/bin/jshint"
-    disableWhenNoJshintrcFileInPath: true
-  "exception-reporting":
-    userId: "84293ec2-27b8-7254-2305-899a45ce785f"
-  "linter-phpcs":
-    standard: "/Users/alex/Bluetent/code-sniffer/Drupal"
-  "autocomplete-plus": {}
-  minimap: {}
   "tool-bar":
     position: "Left"
     visible: false
-  "atom-typescript": {}
   "linter-eslint":
     disableWhenNoEslintrcFileInPath: true
   tabs:
     enableVcsColoring: true
+    tabScrolling: true
+    usePreviewTabs: true
   "tree-view":
     hideIgnoredNames: true
   "symbols-tree-view":
     autoToggle: true
-".source.ts.tsx":
-  editor:
-    preferredLineLength: 120
-".source.ts":
-  editor:
-    preferredLineLength: 120
-jshint:
-  validateOnlyOnSave: true
 minimap:
   plugins:
     "git-diff": false
@@ -99,4 +44,4 @@ minimap:
   enableAutoActivation: false
 editor:
   showIndentGuide: true
-  preferredLineLength: 120
+  softWrap: true
