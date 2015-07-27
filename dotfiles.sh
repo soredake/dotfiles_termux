@@ -14,8 +14,6 @@ function doIt() {
   # Symlink some config directories.
   symlinked_dirs=(
     .atom
-    .drush
-    .WebIde80
   );
   for symlinked_dir in "${symlinked_dirs[@]}"; do
     if ! [[ -L "$HOME/$symlinked_dir" && -d "$HOME/$symlinked_dir" ]]; then
@@ -26,8 +24,8 @@ function doIt() {
     fi
   done;
 
-  rsync --exclude ".atom/" --exclude ".bash/private" --exclude ".drush/" \
-  --exclude ".git/" --exclude ".WebIde80/" --exclude "scripts/" \
+  rsync --exclude ".atom/" --exclude ".bash/private" \
+  --exclude ".git/" --exclude "scripts/" \
   --exclude "BASH.md" --exclude "dotfiles.sh" --exclude "GIT.md" \
   --exclude "LICENSE" --exclude "README.md" \
   -avh --no-perms . ~;
