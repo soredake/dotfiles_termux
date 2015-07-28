@@ -14,6 +14,7 @@ function doIt() {
   # Symlink some config directories.
   symlinked_dirs=(
     .atom
+    .config/mpv
   );
   for symlinked_dir in "${symlinked_dirs[@]}"; do
     if ! [[ -L "$HOME/$symlinked_dir" && -d "$HOME/$symlinked_dir" ]]; then
