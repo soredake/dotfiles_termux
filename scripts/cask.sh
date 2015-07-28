@@ -49,7 +49,7 @@ brew cask install dupeguru
 brew cask install dupeguru-me
 brew cask install dupeguru-pe
 brew cask install firefox-ru
-brew cask install flash-player
+brew cask install flash
 brew cask install gimp
 brew cask install harvest
 brew cask install imagealpha

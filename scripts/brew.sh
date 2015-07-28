@@ -76,33 +76,21 @@ brew install dwarf-fortress
 brew install chocolate-doom
 brew install cataclysm
 brew install youtube-dl
+brew install thefuck
 
 # TODO: update this
 brew install ack
-brew install android-sdk
-brew install autoconf
-brew install automake
-brew install bfg
+# brew install bfg
 brew install colordiff
-brew install composer
-brew install ctags
+# brew install ctags
 brew install dos2unix
 brew install dtrx
 brew install gettext
 brew install git
 brew install hub
-brew install icu4c
-brew install libpng
-brew install libsass
-brew install phantomjs
-
-brew install qcachegrind
 brew install rename
-# brew install solr36
 brew install ssh-copy-id
 brew install tree
-brew install wp-cli
-brew install zopfli
 
 # Use latest rsync rather than out-dated OS X rsync install separately from the
 # main formulae list to fix gh-19.
