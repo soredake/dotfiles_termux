@@ -37,9 +37,11 @@ brew tap caskroom/versions
 #brew cask install ccleaner
 #brew cask install screenflow
 brew cask install --appdir=/Applications megasync
+brew cask install adobe-creative-cloud
 brew cask install appzapper
 brew cask install atom
 brew cask install bettertouchtool
+brew cask install cuda
 brew cask install dash
 brew cask install dnscrypt
 brew cask install dosbox
@@ -48,6 +50,7 @@ brew cask install dropbox
 brew cask install dupeguru
 brew cask install dupeguru-me
 brew cask install dupeguru-pe
+brew cask install fenque/veracrypt/veracrypt
 brew cask install firefox-ru
 brew cask install flash
 brew cask install gimp
@@ -78,22 +81,18 @@ brew cask install thunderbird-ru
 brew cask install torbrowser-ru
 brew cask install transmission
 brew cask install vagrant
-brew cask install fenque/veracrypt/veracrypt
 brew cask install virtualbox
 brew cask install xquartz
 
 # Quick Look plugins.
 brew cask install qlcolorcode
-brew cask install qlstephen
-brew cask install qlmarkdown
-brew cask install quicklook-json
-brew cask install qlprettypatch
-brew cask install quicklook-csv
 brew cask install qlimagesize
+brew cask install qlmarkdown
+brew cask install qlprettypatch
+brew cask install qlstephen
+brew cask install quicklook-csv
+brew cask install quicklook-json
 brew cask install webpquicklook
-
-# Install custom Casks.
-brew cask install "~/.init/popcorn-time.rb"
 
 # Remove outdated versions from the cellar.
 brew cleanup
