@@ -44,8 +44,8 @@ brew install homebrew/versions/bash-completion2
 
 
 # Tap some repos
-brew tap Homebrew/homebrew-python
 brew tap Homebrew/homebrew-games
+brew tap Homebrew/homebrew-python
 brew tap casidiablo/custom
 
 # Install `wget` with IRI support.
@@ -58,31 +58,31 @@ brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
 
 # Install other useful binaries.
-brew install aredridel/iojs/iojs
-brew install --with-openssl ffmpeg
 brew install --HEAD tox/tox/qtox
-brew install wget
+brew install --with-openssl ffmpeg
+brew install aredridel/iojs/iojs
 brew install avidemux
-brew install htop-osx
-brew install python3
-brew install mpv-player/mpv/mpv
-brew install cmus
-brew install shellcheck
-brew install rogue
-brew install ppsspp
-brew install openttd
-brew install freeciv
-brew install dwarf-fortress
-brew install chocolate-doom
 brew install cataclysm
-brew install youtube-dl
+brew install chocolate-doom
+brew install cmus
+brew install dwarf-fortress
+brew install freeciv
+brew install htop-osx
+brew install mpv-player/mpv/mpv
+brew install openttd
+brew install ppsspp
+brew install python3
+brew install rogue
+brew install shellcheck
 brew install thefuck
+brew install wget
+brew install youtube-dl
 
 # TODO: update this
-brew install ack
 # brew install bfg
-brew install colordiff
 # brew install ctags
+brew install ack
+brew install colordiff
 brew install dos2unix
 brew install dtrx
 brew install gettext

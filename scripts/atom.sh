@@ -20,6 +20,5 @@ apm install minimap
 apm install minimap-git-diff
 apm install project-manager
 apm install react-snippets
-apm install sort-lines
 apm install stylus
 apm install todo-show
