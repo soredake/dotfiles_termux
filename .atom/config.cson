@@ -42,11 +42,11 @@
       "git-diff": true
   "exception-reporting":
     userId: "59773b2b-4717-e629-2f2c-8c3a29e60b68"
-editor:
-  showIndentGuide: true
-  softWrap: true
-"autocomplete-plus":
-  enableAutoActivation: false
 minimap:
   plugins:
     "git-diff": false
+"autocomplete-plus":
+  enableAutoActivation: false
+editor:
+  showIndentGuide: true
+  softWrap: true

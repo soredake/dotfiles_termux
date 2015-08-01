@@ -55,7 +55,7 @@ done;
 unset method;
 
 # Use Sublime Text as default editor.
-export EDITOR='subl';
+export EDITOR='atom';
 
 # Android Dev
 #export JAVA_HOME=$(/usr/libexec/java_home)

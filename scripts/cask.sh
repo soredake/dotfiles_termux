@@ -43,8 +43,6 @@ brew cask install atom
 brew cask install bettertouchtool
 brew cask install cuda
 brew cask install dash
-brew cask install dnscrypt
-brew cask install dosbox
 brew cask install double-commander
 brew cask install dropbox
 brew cask install dupeguru
@@ -52,7 +50,6 @@ brew cask install dupeguru-me
 brew cask install dupeguru-pe
 brew cask install fenque/veracrypt/veracrypt
 brew cask install firefox-ru
-brew cask install flash
 brew cask install gimp
 brew cask install harvest
 brew cask install imagealpha
@@ -90,6 +87,7 @@ brew cask install qlimagesize
 brew cask install qlmarkdown
 brew cask install qlprettypatch
 brew cask install qlstephen
+brew cask install qlvideo
 brew cask install quicklook-csv
 brew cask install quicklook-json
 brew cask install webpquicklook

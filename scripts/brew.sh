@@ -65,6 +65,9 @@ brew install avidemux
 brew install cataclysm
 brew install chocolate-doom
 brew install cmus
+brew install curl --with-libressl --with-c-ares --with-libidn --with-nghttp2 --with-rtmpdump --with-libmetalink --with-gssapi --with-libssh2
+brew install dnscrypt-proxy --with-plugins
+brew install dosbox
 brew install dwarf-fortress
 brew install freeciv
 brew install htop-osx
@@ -99,10 +102,8 @@ brew install https://raw.github.com/Homebrew/homebrew-dupes/master/rsync.rb
 # Link a some formulas
 brew linkapps mpv avidemux ppsspp openttd
 
-# Fix htop permissions
-cd /usr/local/Cellar/htop-osx/0.8.2.7/bin/
-chmod 6555 htop
-sudo chown root htop
+# Link curl formula
+brew link curl --force
 
 # Remove outdated versions from the cellar.
 brew cleanup
