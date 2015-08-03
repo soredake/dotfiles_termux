@@ -9,7 +9,6 @@ The following custom aliases/commands are available:
 * __afk__: Lock the screen
 * __cask__: brew cask
 * __chromekill__: Kill all the tabs in Chrome to free up memory
-* __cm__: Start MailCatcher
 * __emptytrash__: Empty the Trash on all mounted volumes and the main HDD as well as system logs
 * __fuck__: Auto-correct last input
 * __hosts__: Open hosts file in $EDITOR

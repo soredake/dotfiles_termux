@@ -102,8 +102,5 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 alias usd="cconv 1 usd uah"
 alias eur="cconv 1 uah usd"
 
-# Start Mailcatcher ("catch mail").
-alias cm="mailcatcher --smtp-port 30000"
-
 # Update all Python packages installed via Pip.
-alias pipudate="pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U"
+alias pipupdate="pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U"
