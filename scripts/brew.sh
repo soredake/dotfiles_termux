@@ -59,7 +59,7 @@ brew install homebrew/dupes/screen
 
 # Install other useful binaries.
 brew install --HEAD tox/tox/qtox
-brew install --with-openssl ffmpeg
+brew install ffmpeg --with-openssl --without-qtkit
 brew install aredridel/iojs/iojs
 brew install avidemux
 brew install cataclysm
