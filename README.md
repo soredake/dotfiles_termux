@@ -25,9 +25,10 @@ The following scripts are available in the "scripts" folder:
 * `brew.sh` Install command-line tools using Homebrew
 * `cask.sh` Install native OS X apps using Homebrew Cask
 * `home.sh` __Wrapper around the all of the other scripts; use this to set up a new Mac__
-* `node.sh` Install global Node.js packages
+* `node.sh` Install global io.js packages
 * `osx.sh` Sets up sensible defaults for OS X settings and a couple other cool tweaks
 * `python.sh` Install global Python packages via Pip
+* `ruby.sh` Install global ruby gems
 
 ## Help
 

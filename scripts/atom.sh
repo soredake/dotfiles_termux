@@ -2,6 +2,7 @@
 
 # Install Atom packages.
 apm install advanced-new-file
+apm install find-selection
 apm install advanced-open-file
 apm install color-picker
 apm install dash

@@ -24,6 +24,7 @@
     preferredLineLength: 120
     showIndentGuide: true
     softWrap: true
+    backUpBeforeSaving: true
   "tool-bar":
     position: "Left"
     visible: false
