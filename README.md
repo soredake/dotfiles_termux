@@ -22,11 +22,10 @@
 The following scripts are available in the "scripts" folder:
 
 * `atom.sh` Install Atom Editor packages
-* `brew.sh` Install command-line tools using Homebrew
-* `cask.sh` Install native OS X apps using Homebrew Cask
+* `apt.sh` Install command-line tools using apt
 * `home.sh` __Wrapper around the all of the other scripts; use this to set up a new Mac__
-* `node.sh` Install global Node.js packages
-* `osx.sh` Sets up sensible defaults for OS X settings and a couple other cool tweaks
+* `node.sh` Install global io.js packages
+* `linux.sh` Sets up sensible defaults for OS X settings and a couple other cool tweaks
 * `python.sh` Install global Python packages via Pip
 
 ## Help

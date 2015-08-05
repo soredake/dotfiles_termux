@@ -44,9 +44,6 @@ printf -v PATH "%s:" "${new_paths[@]}";
 export PATH="${PATH%:}";
 unset {old,new}_path{,s} path{s,}_to_add;
 
-# Prefer Homebrew's netcat.
-[ -x /usr/local/bin/netcat ] && hash -p /usr/local/bin/netcat nc;
-
 # OS X's file system is case-insensitive by default, so use aliases to get
 # "GET"/"HEAD"/… working. (Otherwise "HEAD" would execute "/usr/bin/head".)
 [[ "$OSTYPE" =~ ^darwin ]] && for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
@@ -54,12 +51,8 @@ unset {old,new}_path{,s} path{s,}_to_add;
 done;
 unset method;
 
-# Use Sublime Text as default editor.
-export EDITOR='atom';
-
-# Android Dev
-#export JAVA_HOME=$(/usr/libexec/java_home)
-#export ANDROID_HOME=/usr/local/opt/android-sdk
+# Use nano as default editor.
+export EDITOR='nano';
 
 # Make less the default pager, and specify some useful defaults.
 less_options=(
@@ -129,9 +122,6 @@ export HISTTIMEFORMAT="${FG_BLUE}${FONT_BOLD}%Y/%m/%d %H:%M:%S${FONT_RESET}  ";
 # Make some commands not show up in history.
 export HISTIGNORE="ls:cd:cd:ll:ls:la:history -:pwd:exit:date:* --help";
 
-# Link Homebrew casks in `/Applications` rather than `~/Applications`.
-export HOMEBREW_CASK_OPTS="--appdir=/Applications";
-
 # Make new shells get the history lines from all previous shells instead of the
 # default "last window closed" history.
 export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
@@ -160,8 +150,3 @@ else
   ${PROMPT_COMMAND:-}
   ";
 fi;
-
-# Docker.
-export DOCKER_TLS_VERIFY=1
-export DOCKER_HOST=tcp://192.168.59.103:2376
-export DOCKER_CERT_PATH="$HOME/.boot2docker/certs/boot2docker-vm"

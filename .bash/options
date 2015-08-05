@@ -47,24 +47,12 @@ if type _git &> /dev/null && [ -f /usr/local/etc/bash_completion.d/git-completio
   complete -o default -o nospace -F _git g;
 fi;
 
-# If we have found drush.complete.sh, then source it.
-#if [ -f "$HOME/.composer/vendor/drush/drush/drush.complete.sh" ] ; then
-#  source "$HOME/.composer/vendor/drush/drush/drush.complete.sh"
-#fi
-
-# Completion for Homebrew.
-source `brew --repository`/Library/Contributions/brew_bash_completion.sh
-
 # NVM. @TODO do something on this
-#export NVM_DIR=~/.nvm
-#source $(brew --prefix nvm)/nvm.sh
+export NVM_DIR=~/.nvm
+source ~/.nvm/nvm.sh
 
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards.
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2 | tr ' ' '\n')" scp sftp ssh;
-
-# Add tab completion for `defaults read|write NSGlobalDomain`.
-# You could just use `-g` instead, but I like being explicit.
-# complete -W "NSGlobalDomain" defaults;
 
 # Use solarized dircolors if available
 if command -v dircolors > /dev/null; then
