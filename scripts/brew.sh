@@ -47,6 +47,7 @@ brew install homebrew/versions/bash-completion2
 brew tap Homebrew/homebrew-games
 brew tap Homebrew/homebrew-python
 brew tap casidiablo/custom
+brew tap yawara/twister
 
 # Install `wget` with IRI support.
 brew install wget --with-iri
@@ -59,7 +60,6 @@ brew install homebrew/dupes/screen
 
 # Install other useful binaries.
 brew install --HEAD tox/tox/qtox
-brew install ffmpeg --with-openssl --without-qtkit
 brew install aredridel/iojs/iojs
 brew install avidemux
 brew install cataclysm
@@ -69,16 +69,20 @@ brew install curl --with-libressl --with-c-ares --with-libidn --with-nghttp2 --w
 brew install dnscrypt-proxy --with-plugins
 brew install dosbox
 brew install dwarf-fortress
+brew install ffmpeg --with-openssl --without-qtkit
 brew install freeciv
 brew install htop-osx
 brew install mpv-player/mpv/mpv
 brew install openttd
+brew install pgcli
 brew install ppsspp
 brew install python3
 brew install rogue
+brew install ruby
+brew install screenbrightness
 brew install shellcheck
 brew install thefuck
-brew install wget
+brew install twister --HEAD
 brew install youtube-dl
 
 # TODO: update this

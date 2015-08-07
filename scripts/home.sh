@@ -36,9 +36,6 @@ source cask.sh
 # Install Mode modules.
 source node.sh
 
-# Install Ruby gems.
-source ruby.sh
-
 # Install Atom plugins.
 source node.sh
 
@@ -47,3 +44,6 @@ source python.sh
 
 # Setup OSX.
 source osx.sh
+
+# Install ruby gems.
+source ruby.sh
