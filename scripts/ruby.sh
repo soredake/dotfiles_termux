@@ -13,6 +13,7 @@ gem update --system
 
 # Install our global gems.
 gem install bundler
-gem install mailcatcher
+gem install git-up
 gem install istats
+gem install mailcatcher
 gem install t

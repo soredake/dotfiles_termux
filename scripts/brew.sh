@@ -84,6 +84,7 @@ brew install shellcheck
 brew install thefuck
 brew install twister --HEAD
 brew install youtube-dl
+brew install media-info
 
 # TODO: update this
 # brew install bfg
