@@ -22,7 +22,7 @@
   precomposeunicode = false
 
   # Use Atom as the default editor.
-  editor = atom
+  editor = atom --wait
 
   # Don't mess with line endings when checking out files, but fix files with
   # CRLF endings introduced accidentally.
