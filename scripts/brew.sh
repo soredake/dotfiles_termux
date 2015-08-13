@@ -82,6 +82,7 @@ brew install ruby
 brew install screenbrightness
 brew install shellcheck
 brew install thefuck
+brew install nvm
 brew install twister --HEAD
 brew install youtube-dl
 brew install media-info
