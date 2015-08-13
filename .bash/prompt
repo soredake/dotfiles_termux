@@ -105,11 +105,6 @@ else
   hostStyle="${yellow}";
 fi;
 
-# Highlight the Drush site alias if available.
-#if [ "\$(type -t __drush_ps1)" ]; then
-#	drushStyle='$(__drush_ps1 "${white} using ${blue}%s")'
-#fi
-
 # Set the terminal title to the current working directory.
 PS1="\[\033]0;\w\007\]";
 PS1+="\[${bold}\]\n"; # newline

@@ -4,11 +4,14 @@
   core:
     followSymlinks: true
     projectHome: "~/Documents/github"
-    audioBeep: false
     ignoredNames: [
       ".git"
       ".DS_STORE"
       ".idea"
+    ]
+    audioBeep: false
+    disabledPackages: [
+      "metrics"
     ]
   "atom-ctags":
     autoBuildTagsWhenActive: true
@@ -25,6 +28,7 @@
     showIndentGuide: true
     softWrap: true
     backUpBeforeSaving: true
+    showInvisibles: true
   "tool-bar":
     position: "Left"
     visible: false
@@ -43,11 +47,16 @@
       "git-diff": true
   "exception-reporting":
     userId: "59773b2b-4717-e629-2f2c-8c3a29e60b68"
-editor:
-  showIndentGuide: true
-  softWrap: true
-"autocomplete-plus":
-  enableAutoActivation: false
+  jumpy: {}
+  "fuzzy-finder": {}
+  "git-diff": {}
+  "one-dark-ui": {}
+  "unity-dark-ui": {}
 minimap:
   plugins:
     "git-diff": false
+"autocomplete-plus":
+  enableAutoActivation: false
+editor:
+  showIndentGuide: true
+  softWrap: true

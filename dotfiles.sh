@@ -15,6 +15,7 @@ function doIt() {
   symlinked_dirs=(
     .atom
     .config/mpv
+		.config/cmus
   );
   for symlinked_dir in "${symlinked_dirs[@]}"; do
     if ! [[ -L "$HOME/$symlinked_dir" && -d "$HOME/$symlinked_dir" ]]; then
