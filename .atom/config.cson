@@ -10,6 +10,9 @@
       ".idea"
     ]
     audioBeep: false
+    disabledPackages: [
+      "metrics"
+    ]
   "atom-ctags":
     autoBuildTagsWhenActive: true
   linter:
@@ -49,11 +52,11 @@
   "git-diff": {}
   "one-dark-ui": {}
   "unity-dark-ui": {}
-editor:
-  showIndentGuide: true
-  softWrap: true
-"autocomplete-plus":
-  enableAutoActivation: false
 minimap:
   plugins:
     "git-diff": false
+"autocomplete-plus":
+  enableAutoActivation: false
+editor:
+  showIndentGuide: true
+  softWrap: true

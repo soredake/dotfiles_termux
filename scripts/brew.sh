@@ -48,6 +48,7 @@ brew tap Homebrew/homebrew-games
 brew tap Homebrew/homebrew-python
 brew tap casidiablo/custom
 brew tap yawara/twister
+brew tap homebrew/php
 
 # Install `wget` with IRI support.
 brew install wget --with-iri
@@ -72,9 +73,12 @@ brew install dwarf-fortress
 brew install ffmpeg --with-openssl --without-qtkit
 brew install freeciv
 brew install htop-osx
+brew install media-info
 brew install mpv-player/mpv/mpv
+brew install nvm
 brew install openttd
 brew install pgcli
+brew install php56 --with-homebrew-curl
 brew install ppsspp
 brew install python3
 brew install rogue
@@ -82,10 +86,8 @@ brew install ruby
 brew install screenbrightness
 brew install shellcheck
 brew install thefuck
-brew install nvm
 brew install twister --HEAD
 brew install youtube-dl
-brew install media-info
 
 # TODO: update this
 # brew install bfg
