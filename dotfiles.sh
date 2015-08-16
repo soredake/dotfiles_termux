@@ -7,9 +7,9 @@ git pull origin master;
 
 function doIt() {
   # Copy the ".bash/private" file only if it doesn't already exist.
-  if [ ! -f ~/.bash/private ]; then
-    cp .bash/private ~/.bash/private
-  fi
+  #if [ ! -f ~/.bash/private ]; then
+  #  cp .bash/private ~/.bash/private
+  #fi
 
   # Symlink some config directories.
   symlinked_dirs=(
@@ -31,7 +31,6 @@ function doIt() {
   --exclude "BASH.md" --exclude "dotfiles.sh" --exclude "GIT.md" \
   --exclude "LICENSE" --exclude "README.md" \
   -avh --no-perms . ~;
-  source ~/.bash_profile;
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
