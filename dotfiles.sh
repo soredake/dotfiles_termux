@@ -7,9 +7,9 @@ git pull origin master;
 
 function doIt() {
   # Copy the ".bash/private" file only if it doesn't already exist.
-  #if [ ! -f ~/.bash/private ]; then
-  #  cp .bash/private ~/.bash/private
-  #fi
+  if [ ! -f ~/.private ]; then
+    cp .private ~/.private
+  fi
 
   # Symlink some config directories.
   symlinked_dirs=(
@@ -26,7 +26,7 @@ function doIt() {
     fi
   done;
 
-  rsync --exclude ".atom/" --exclude ".bash/private"  --exclude ".config/mpv" \
+  rsync --exclude ".atom/" --exclude ".private"  --exclude ".config/mpv" \
   --exclude ".git/" --exclude "scripts/" \
   --exclude "BASH.md" --exclude "dotfiles.sh" --exclude "GIT.md" \
   --exclude "LICENSE" --exclude "README.md" \

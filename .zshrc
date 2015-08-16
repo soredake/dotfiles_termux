@@ -5,7 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="amuse"
+ZSH_THEME="bureau"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -57,6 +57,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
+source $HOME/.private
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
@@ -139,23 +140,6 @@ export GREP_OPTIONS="--color=auto";
 # Link Homebrew casks in `/Applications` rather than `~/Applications`.
 export HOMEBREW_CASK_OPTS="--appdir=/Applications";
 
-# Use this file to store private configuration required by some of the other
-# scripts. Once you modify it, run `git update-index --assume-unchanged` on it
-# in order to keep your private info from getting comitted by mistake!
-
-# Computer name.
-COMPUTERNAME="Computer"
-
-# Git author.
-GIT_AUTHOR_NAME="name"
-GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
-git config --global user.name "$GIT_AUTHOR_NAME"
-
-# Git email.
-GIT_AUTHOR_EMAIL="email@example"
-GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
-git config --global user.email "$GIT_AUTHOR_EMAIL"
-
 # Keep a reasonably long history.
 # export HISTSIZE=4096;
 # Keep a super long history.
@@ -209,21 +193,6 @@ fi;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Enable simple aliases to be sudo'ed. ("sudone"?)
 # http://www.gnu.org/software/bash/manual/bashref.html#Aliases says: "If the
 # last character of the alias value is a space or tab character, then the next
@@ -265,22 +234,6 @@ if ls --color > /dev/null 2>&1; then # GNU `ls`
 else # OS X `ls`
   colorflag="-G"
 fi
-
-alias ls='CLICOLOR_FORCE=1 ls -Fh ${colorflag}'
-
-# List ALL files (colorized() in long format, show permissions in octal
-alias la="ls -la | awk '
-{
-k=0;
-for (i=0;i<=8;i++)
-k+=((substr(\$1,i+2,1)~/[rwx]/)*2^(8-i));
-if (k)
-  printf(\"%0o \",k);
-  print
-}'"
-
-# List only directories.
-alias lsd='ls -l | grep "^d"'
 
 # Git.
 alias g="git"
