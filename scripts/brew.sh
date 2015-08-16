@@ -62,6 +62,7 @@ brew install dosbox
 brew install dwarf-fortress
 brew install ffmpeg --with-openssl --without-qtkit
 brew install freeciv
+brew install git-extras
 brew install htop-osx
 brew install media-info
 brew install mpv-player/mpv/mpv
