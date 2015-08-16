@@ -57,6 +57,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
+source $HOME/.private
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
@@ -138,23 +139,6 @@ export GREP_OPTIONS="--color=auto";
 
 # Link Homebrew casks in `/Applications` rather than `~/Applications`.
 export HOMEBREW_CASK_OPTS="--appdir=/Applications";
-
-# Use this file to store private configuration required by some of the other
-# scripts. Once you modify it, run `git update-index --assume-unchanged` on it
-# in order to keep your private info from getting comitted by mistake!
-
-# Computer name.
-COMPUTERNAME="Computer"
-
-# Git author.
-GIT_AUTHOR_NAME="name"
-GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
-git config --global user.name "$GIT_AUTHOR_NAME"
-
-# Git email.
-GIT_AUTHOR_EMAIL="email@example"
-GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
-git config --global user.email "$GIT_AUTHOR_EMAIL"
 
 # Keep a reasonably long history.
 # export HISTSIZE=4096;
