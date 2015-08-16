@@ -5,7 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="amuse"
+ZSH_THEME="bureau"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -193,21 +193,6 @@ fi;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Enable simple aliases to be sudo'ed. ("sudone"?)
 # http://www.gnu.org/software/bash/manual/bashref.html#Aliases says: "If the
 # last character of the alias value is a space or tab character, then the next
@@ -249,22 +234,6 @@ if ls --color > /dev/null 2>&1; then # GNU `ls`
 else # OS X `ls`
   colorflag="-G"
 fi
-
-alias ls='CLICOLOR_FORCE=1 ls -Fh ${colorflag}'
-
-# List ALL files (colorized() in long format, show permissions in octal
-alias la="ls -la | awk '
-{
-k=0;
-for (i=0;i<=8;i++)
-k+=((substr(\$1,i+2,1)~/[rwx]/)*2^(8-i));
-if (k)
-  printf(\"%0o \",k);
-  print
-}'"
-
-# List only directories.
-alias lsd='ls -l | grep "^d"'
 
 # Git.
 alias g="git"
