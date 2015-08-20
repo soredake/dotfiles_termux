@@ -27,7 +27,7 @@ function doIt() {
   done;
 
   rsync --exclude ".atom/" --exclude ".private"  --exclude ".config/mpv" \
-  --exclude ".git/" --exclude "scripts/" \
+  --exclude ".git/" --exclude "scripts/" --exclude ".config/cmus" \
   --exclude "BASH.md" --exclude "dotfiles.sh" --exclude "GIT.md" \
   --exclude "LICENSE" --exclude "README.md" \
   -avh --no-perms . ~;

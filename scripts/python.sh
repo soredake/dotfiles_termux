@@ -8,4 +8,5 @@
 # Keep-alive: update existing `sudo` timestamp until we're done.
 #while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-pip3 install Pillow plyr
+pip3 install pillow plyr livestreamer
+pip install urwid trackma

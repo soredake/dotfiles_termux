@@ -77,6 +77,7 @@ brew install ruby
 brew install screenbrightness
 brew install shellcheck
 brew install thefuck
+brew install tree
 brew install twister --HEAD
 brew install youtube-dl
 

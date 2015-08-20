@@ -36,7 +36,7 @@ brew tap caskroom/versions
 #brew cask install battle-net
 #brew cask install ccleaner
 #brew cask install screenflow
-brew cask install --appdir=/Applications megasync
+brew cask install megasync
 brew cask install adobe-creative-cloud
 brew cask install appzapper
 brew cask install atom
@@ -80,6 +80,7 @@ brew cask install transmission
 brew cask install vagrant
 brew cask install virtualbox
 brew cask install xquartz
+brew cask install spotify
 
 # Quick Look plugins.
 brew cask install qlcolorcode
