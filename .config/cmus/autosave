@@ -87,8 +87,8 @@ set shuffle=false
 set skip_track_info=false
 set smart_artist_sort=true
 set softvol=true
-set softvol_state=40 40
-set status_display_program=/Users/susekaboss/.cmus/lastfm/status_display_program.sh
+set softvol_state=30 30
+set status_display_program=/Users/susekaboss/Documents/soft/lastfm/status_display_program.sh
 set wrap_search=true
 bind browser backspace browser-up
 bind browser i toggle show_hidden

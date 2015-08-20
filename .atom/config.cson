@@ -12,6 +12,7 @@
     audioBeep: false
     disabledPackages: [
       "metrics"
+      "quick-jump"
     ]
   "atom-ctags":
     autoBuildTagsWhenActive: true
@@ -52,6 +53,9 @@
   "git-diff": {}
   "one-dark-ui": {}
   "unity-dark-ui": {}
+  "smart-tab-name": {}
+  "git-projects":
+    rootPath: "/Users/susekaboss/Documents/github/"
 minimap:
   plugins:
     "git-diff": false

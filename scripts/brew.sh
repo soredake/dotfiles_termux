@@ -39,14 +39,24 @@ brew tap Homebrew/homebrew-python
 brew tap casidiablo/custom
 brew tap yawara/twister
 brew tap homebrew/php
+brew tap homebrew/dupes
+
+# Install wine needed libs
+brew install libjpeg --universal
+brew install libpng --universal
+brew install libtiff --universal
+brew install freetype --universal
+brew install gettext --universal
+brew install libgsm --universal
+brew install little-cms2 --universal
 
 # Install `wget` with IRI support.
 brew install wget --with-iri
 
 # Install more recent versions of some OS X tools.
 # brew install vim --override-system-vi
-brew install homebrew/dupes/grep
-brew install homebrew/dupes/openssh
+brew install homebrew/dupes/grep --with-default-names
+brew install homebrew/dupes/openssh --with-libressl
 brew install homebrew/dupes/screen
 
 # Install other useful binaries.
@@ -60,11 +70,10 @@ brew install curl --with-libressl --with-c-ares --with-libidn --with-nghttp2 --w
 brew install dnscrypt-proxy --with-plugins
 brew install dosbox
 brew install dwarf-fortress
-brew install ffmpeg --with-openssl --without-qtkit
+brew install ffmpeg --with-openssl --without-qtkit --with-libssh
 brew install freeciv
 brew install git-extras
 brew install htop-osx
-brew install media-info
 brew install mpv-player/mpv/mpv
 brew install nvm
 brew install openttd
@@ -72,15 +81,28 @@ brew install pgcli
 brew install php56 --with-homebrew-curl
 brew install ppsspp
 brew install python3
+brew install ranger
 brew install rogue
 brew install ruby
 brew install screenbrightness
 brew install shellcheck
 brew install thefuck
+brew install tree
 brew install twister --HEAD
+brew install unrar
 brew install youtube-dl
+brew install cabextract
+brew install winetricks --ignore-dependencies
+brew install gnupg
+brew install binutils
 
-# TODO: update this
+# Ranger supplements
+brew install highlight
+brew install exiftool
+brew install w3m
+brew install ffmpegthumbnailer
+brew install media-info
+
 # brew install bfg
 # brew install ctags
 brew install ack
@@ -101,8 +123,9 @@ brew install https://raw.github.com/Homebrew/homebrew-dupes/master/rsync.rb
 # Link a some formulas
 brew linkapps mpv avidemux ppsspp openttd
 
-# Link curl formula
+# Link formulas
 brew link curl --force
+brew link --force gettext
 
 # Remove outdated versions from the cellar.
 brew cleanup

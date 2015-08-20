@@ -49,7 +49,7 @@ ZSH_THEME="bureau"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git atom brew common-aliases dircycle dirhistory)
+plugins=(git atom brew brew-cask battery common-aliases dircycle dirhistory tmuxinator tmux osx nyan npm nvm git-extras web-search)
 
 # User configuration
 

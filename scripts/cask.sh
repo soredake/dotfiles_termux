@@ -36,7 +36,7 @@ brew tap caskroom/versions
 #brew cask install battle-net
 #brew cask install ccleaner
 #brew cask install screenflow
-brew cask install --appdir=/Applications megasync
+brew cask install megasync
 brew cask install adobe-creative-cloud
 brew cask install appzapper
 brew cask install atom
@@ -54,7 +54,7 @@ brew cask install gimp
 brew cask install harvest
 brew cask install imagealpha
 brew cask install imageoptim
-brew cask install iterm2
+brew cask install iterm2-nightly
 brew cask install keka
 brew cask install libreoffice-ru
 brew cask install mmex
@@ -80,6 +80,11 @@ brew cask install transmission
 brew cask install vagrant
 brew cask install virtualbox
 brew cask install xquartz
+brew cask install spotify
+brew cask install gitup
+
+# Ranger supplements
+brew cask install pdftotext
 
 # Quick Look plugins.
 brew cask install qlcolorcode
