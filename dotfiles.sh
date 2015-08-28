@@ -12,23 +12,32 @@ function doIt() {
   fi
 
   # Symlink some config directories.
-  symlinked_dirs=(
-    .atom
-  );
-  for symlinked_dir in "${symlinked_dirs[@]}"; do
-    if ! [[ -L "$HOME/$symlinked_dir" && -d "$HOME/$symlinked_dir" ]]; then
-      ln -s "$SOURCE_DIR/$symlinked_dir" "$HOME/$symlinked_dir"
-      echo "Create symlink from $symlinked_dir to $HOME/$symlinked_dir"
-    else
-      echo "Link for $symlinked_dir already exists"
-    fi
-  done;
+#  symlinked_dirs=(
+#    .atom
+#    .config/mpv
+#		.config/cmus
+#		.config/ranger
+#  );
+#  for symlinked_dir in "${symlinked_dirs[@]}"; do
+#    if ! [[ -L "$HOME/$symlinked_dir" && -d "$HOME/$symlinked_dir" ]]; then
+#      ln -s "$SOURCE_DIR/$symlinked_dir" "$HOME/$symlinked_dir"
+#      echo "Create symlink from $symlinked_dir to $HOME/$symlinked_dir"
+#    else
+#      echo "Link for $symlinked_dir already exists"
+#    fi
+#  done;
 
-  rsync --exclude ".atom/" --exclude ".private"  --exclude ".config/mpv" \
+  rsync --exclude ".private" \
   --exclude ".git/" --exclude "scripts/" --exclude ".config/cmus" \
   --exclude "BASH.md" --exclude "dotfiles.sh" --exclude "GIT.md" \
   --exclude "LICENSE" --exclude "README.md" \
   -avh --no-perms . ~;
+
+	#rsync -avh --no-perms long/firefox/profiles.ini $HOME/Library/Application\ Support/Firefox/profiles.ini
+	#ln -s "$SOURCE_DIR/long/firefox/user.js" "$HOME/Library/Application Support/Firefox/Profiles/u4u84drs.default/user.js"
+	#rsync -avh --no-perms long/thunderbird/profiles.ini $HOME/Library/Thunderbird/profiles.ini
+  #echo "Create symlink from $SOURCE_DIR/long/firefox/user.js to $HOME/Library/Application Support/Firefox/Profiles/u4u84drs.default/user.js"
+
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then

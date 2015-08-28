@@ -20,3 +20,19 @@ source python.sh
 
 # Setup linux.
 source linux.sh
+
+# Install zsh.
+ZSHPATH=/usr/bin/zsh
+echo $ZSHPATH | sudo tee -a /etc/shells
+chsh -s $ZSHPATH
+
+# Install ruby gems.
+source ruby.sh
+
+# Create dirs
+mkdir ~/Downloads/torrents
+mkdir ~/.rtorrent-session
+mkdir ~/Documents/soft
+mkdir ~/Documents/github
+mkdir ~/Movies/records
+mkdir ~/Library/Application\ Support/Firefox/Profiles/u4u84drs.default
