@@ -54,7 +54,7 @@ brew cask install gimp
 brew cask install harvest
 brew cask install imagealpha
 brew cask install imageoptim
-brew cask install iterm2
+brew cask install iterm2-nightly
 brew cask install keka
 brew cask install libreoffice-ru
 brew cask install mmex
@@ -81,6 +81,10 @@ brew cask install vagrant
 brew cask install virtualbox
 brew cask install xquartz
 brew cask install spotify
+brew cask install gitup
+
+# Ranger supplements
+brew cask install pdftotext
 
 # Quick Look plugins.
 brew cask install qlcolorcode

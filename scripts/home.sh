@@ -25,10 +25,9 @@ sudo chown -R $USER /usr/local
 source brew.sh
 
 # Install Bash 4.
-BASHPATH=$(brew --prefix)/bin/bash
-echo $BASHPATH | sudo tee -a /etc/shells
-chsh -s $BASHPATH
-echo $BASH_VERSION # should be 4.x not the old 3.2.X
+ZSHPATH=$(brew --prefix)/bin/zsh
+echo $ZSHPATH | sudo tee -a /etc/shells
+chsh -s $ZSHPATH
 
 # Install Homebrew Casks.
 source cask.sh
@@ -47,3 +46,11 @@ source osx.sh
 
 # Install ruby gems.
 source ruby.sh
+
+# Create dirs
+mkdir ~/Downloads/torrents
+mkdir ~/.rtorrent-session
+mkdir ~/Documents/soft
+mkdir ~/Documents/github
+mkdir ~/Movies/records
+mkdir ~/Library/Application\ Support/Firefox/Profiles/u4u84drs.default
