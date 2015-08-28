@@ -83,21 +83,11 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # NVM.
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+#export NVM_DIR=~/.nvm
+#source $(brew --prefix nvm)/nvm.sh
 
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards.
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2 | tr ' ' '\n')" scp sftp ssh;
-
-# Prefer Homebrew's netcat.
-[ -x /usr/local/bin/netcat ] && hash -p /usr/local/bin/netcat nc;
-
-# OS X's file system is case-insensitive by default, so use aliases to get
-# "GET"/"HEAD"/… working. (Otherwise "HEAD" would execute "/usr/bin/head".)
-[[ "$OSTYPE" =~ ^darwin ]] && for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
-  alias "$method"="/usr/bin/lwp-request -m $method";
-done;
-unset method;
 
 # Make less the default pager, and specify some useful defaults.
 less_options=(
@@ -136,9 +126,6 @@ export LESS_TERMCAP_md="${yellow}";
 
 # Always enable colored `grep` output.
 export GREP_OPTIONS="--color=auto";
-
-# Link Homebrew casks in `/Applications` rather than `~/Applications`.
-export HOMEBREW_CASK_OPTS="--appdir=/Applications";
 
 # Keep a reasonably long history.
 # export HISTSIZE=4096;
