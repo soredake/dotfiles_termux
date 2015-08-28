@@ -12,14 +12,11 @@ source dotfiles.sh
 # Install Homebrew packages.
 source apt.sh
 
-# Install Mode modules.
-source node.sh
-
 # Install Atom plugins.
 source node.sh
 
 # Install Pyton packages.
 source python.sh
 
-# Setup OSX.
-source osx.sh
+# Setup linux.
+source linux.sh
