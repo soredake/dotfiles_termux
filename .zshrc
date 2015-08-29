@@ -53,8 +53,17 @@ plugins=(git common-aliases dircycle dirhistory tmuxinator tmux nyan npm nvm git
 
 # User configuration
 
-#export PATH=$HOME/bin:/usr/local/bin:$PATH
-# export MANPATH="/usr/local/man:$MANPATH"
+# Add additional directories to the path.
+pathadd() {
+  [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]] && PATH="${PATH:+"$PATH:"}$1"
+}
+
+PATH=/usr/local/bin":$PATH" # Prefer brew packages.
+pathadd /opt/local/bin
+pathadd $HOME/bin
+pathadd $HOME/npm/bin
+
+export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.private
