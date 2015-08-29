@@ -49,7 +49,7 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git common-aliases dircycle dirhistory tmuxinator tmux nyan npm nvm git-extras)
+plugins=(git common-aliases dircycle dirhistory tmuxinator tmux nyan npm nvm git-extras zsh-reload)
 
 # User configuration
 
@@ -70,6 +70,10 @@ else
   export EDITOR='vim'
 fi
 
+# Don't hash directories on the path a time, which allows new
+# binaries in $PATH to be executed without rehashing.
+setopt nohashdirs
+
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
@@ -82,8 +86,8 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # NVM.
-#export NVM_DIR=~/.nvm
-#source $(brew --prefix nvm)/nvm.sh
+export NVM_DIR=/usr/local/nvm
+source $NVM_DIR/nvm.sh
 
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards.
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2 | tr ' ' '\n')" scp sftp ssh;
@@ -151,33 +155,6 @@ export HISTIGNORE="ls:cd:cd:ll:ls:la:history -:pwd:exit:date:* --help";
 # Make new shells get the history lines from all previous shells instead of the
 # default "last window closed" history.
 export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
-
-# Enable SSH agent forwarding ("ForwardAgent yes"/"ssh -A") with persistent
-# screen sessions.
-if [ "$TERM" != 'screen' ]; then
-  # Persist the variable so we can source it in existing sessions.
-  if [ -n "$SSH_AUTH_SOCK" ]; then
-    if [ ! -d ~/.ssh ]; then
-      mkdir -p ~/.ssh;
-      chmod 700 ~/.ssh;
-    fi;
-    printf 'export SSH_AUTH_SOCK=%q\n' "$SSH_AUTH_SOCK" >| ~/.ssh/environment.screen;
-  fi;
-else
-  # Re-read the variable after each command. This may seem like overkill,
-  # but the screen session could have been detached and then reattached from
-  # another SSH session, so you never know when the SSH authentication
-  # socket might have changed.
-  export PROMPT_COMMAND="
-  ret=\$?;
-  [ -f ~/.ssh/environment.screen ] && source ~/.ssh/environment.screen;
-  function __return { unset __return; return \$1; }
-  __return \$ret;
-  ${PROMPT_COMMAND:-}
-  ";
-fi;
-
-
 
 # Enable simple aliases to be sudo'ed. ("sudone"?)
 # http://www.gnu.org/software/bash/manual/bashref.html#Aliases says: "If the
