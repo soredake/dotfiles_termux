@@ -32,9 +32,11 @@ sudo apt-get install wget
 sudo apt-get install apt-utils
 sudo apt-get install python-software-properties
 sudo apt-get install rng-tools
+sudo apt-get install curl
 
 # Install nvm
 git clone https://github.com/creationix/nvm.git ~/.nvm && cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.26.1/install.sh | sudo NVM_DIR=/usr/local/nvm bash
 
 # Install nvm package
 nvm install iojs
