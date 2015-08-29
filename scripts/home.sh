@@ -31,3 +31,6 @@ source ruby.sh
 
 # Create dirs
 mkdir ~/Downloads/torrents
+
+# fix
+sudo chown -R $USER /usr/local/nvm/

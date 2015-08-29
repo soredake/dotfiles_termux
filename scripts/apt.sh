@@ -33,13 +33,20 @@ sudo apt-get install apt-utils
 sudo apt-get install python-software-properties
 sudo apt-get install rng-tools
 sudo apt-get install curl
+sudo apt-get install bzip2
+sudo apt-get install cpufrequtils
+sudo apt-get install make
+sudo apt-get install g++
+
+# Install iojs
+su -c "curl -sL https://deb.nodesource.com/setup_iojs_3.x | bash -"
+sudo apt-get install -y iojs
 
 # Install nvm
-git clone https://github.com/creationix/nvm.git ~/.nvm && cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.26.1/install.sh | sudo NVM_DIR=/usr/local/nvm bash
+#curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.26.1/install.sh | sudo NVM_DIR=/usr/local/nvm bash
 
 # Install nvm package
-nvm install iojs
+#nvm install iojs
 
 # Clean downloaded packages
 sudo apt-get autoclean

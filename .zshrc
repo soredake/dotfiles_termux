@@ -49,7 +49,7 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git common-aliases dircycle dirhistory tmuxinator tmux nyan npm nvm git-extras zsh-reload)
+plugins=(git common-aliases dircycle dirhistory tmuxinator tmux nyan npm nvm git-extras zsh_reload)
 
 # User configuration
 
@@ -86,8 +86,8 @@ setopt nohashdirs
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # NVM.
-export NVM_DIR=/usr/local/nvm
-source $NVM_DIR/nvm.sh
+#export NVM_DIR=/usr/local/nvm
+#source $NVM_DIR/nvm.sh
 
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards.
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2 | tr ' ' '\n')" scp sftp ssh;
