@@ -30,9 +30,11 @@ sudo apt-get install git
 sudo apt-get install tmux
 sudo apt-get install wget
 sudo apt-get install apt-utils
+sudo apt-get install python-software-properties
+sudo apt-get install rng-tools
 
 # Install nvm
-curl -o- https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+git clone https://github.com/creationix/nvm.git ~/.nvm && cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`
 
 # Install nvm package
 nvm install iojs
