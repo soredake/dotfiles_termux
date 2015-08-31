@@ -29,14 +29,15 @@ function doIt() {
 
   rsync --exclude ".atom/" --exclude ".private"  --exclude ".config/mpv" --exclude ".config/ranger" \
   --exclude ".git/" --exclude "scripts/" --exclude ".config/cmus" --exclude "long" \
-  --exclude "BASH.md" --exclude "dotfiles.sh" --exclude "GIT.md" \
+  --exclude "ZSH.md" --exclude "dotfiles.sh" --exclude "GIT.md" \
   --exclude "LICENSE" --exclude "README.md" \
   -avh --no-perms . ~;
 
 	rsync -avh --no-perms long/firefox/profiles.ini $HOME/Library/Application\ Support/Firefox/profiles.ini
-	ln -s "$SOURCE_DIR/long/firefox/user.js" "$HOME/Library/Application Support/Firefox/Profiles/u4u84drs.default/user.js"
+	ln -s "$SOURCE_DIR/long/firefox/user.js" "$HOME/Library/Application Support/Firefox/Profiles/v036qpmg.susekaboss/user.js"
+  #rsync -avh --no-perms long/firefox/user.js $HOME/Library/Application\ Support/Firefox/Profiles/v036qpmg.susekaboss/
 	rsync -avh --no-perms long/thunderbird/profiles.ini $HOME/Library/Thunderbird/profiles.ini
-  echo "Create symlink from $SOURCE_DIR/long/firefox/user.js to $HOME/Library/Application Support/Firefox/Profiles/u4u84drs.default/user.js"
+  echo "Create symlink from $SOURCE_DIR/long/firefox/user.js to $HOME/Library/Application Support/Firefox/Profiles/v036qpmg.susekaboss/user.js"
 
 }
 

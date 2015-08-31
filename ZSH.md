@@ -1,4 +1,4 @@
-# Bash Alias Cheat Sheet
+# zsh Alias Cheat Sheet
 
 The following custom aliases/commands are available:
 

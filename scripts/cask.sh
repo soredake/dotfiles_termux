@@ -18,7 +18,6 @@ brew install caskroom/cask/brew-cask
 brew upgrade brew-cask
 
 # Add versions cask tap (betas, nightly releases, old versions).
-# This is required for Chrome Canary.
 brew tap caskroom/versions
 
 # Install apps.
@@ -27,18 +26,15 @@ brew tap caskroom/versions
 # brew cask install google-earth
 # brew cask install java
 # brew cask install kaleidoscope
-# brew cask install lastfm
-# brew cask install miro-video-converter
 # brew cask install moom
-# brew cask install multidoge
 # brew cask install vienna
 #brew cask install alfred
 #brew cask install battle-net
 #brew cask install ccleaner
 #brew cask install screenflow
+#brew cask install appzapper
 brew cask install megasync
 brew cask install adobe-creative-cloud
-brew cask install appzapper
 brew cask install atom
 brew cask install bettertouchtool
 brew cask install cuda
@@ -49,9 +45,8 @@ brew cask install dupeguru
 brew cask install dupeguru-me
 brew cask install dupeguru-pe
 brew cask install fenque/veracrypt/veracrypt
-brew cask install firefox-ru
+brew cask install firefodeveloperedition
 brew cask install gimp
-brew cask install harvest
 brew cask install imagealpha
 brew cask install imageoptim
 brew cask install iterm2-nightly
@@ -76,26 +71,22 @@ brew cask install soundflower
 brew cask install steam
 brew cask install thunderbird-ru
 brew cask install torbrowser-ru
-brew cask install transmission
 brew cask install vagrant
 brew cask install virtualbox
 brew cask install xquartz
 brew cask install spotify
 brew cask install gitup
 
-# Ranger supplements
-brew cask install pdftotext
-
 # Quick Look plugins.
-brew cask install qlcolorcode
-brew cask install qlimagesize
-brew cask install qlmarkdown
-brew cask install qlprettypatch
-brew cask install qlstephen
-brew cask install qlvideo
-brew cask install quicklook-csv
-brew cask install quicklook-json
-brew cask install webpquicklook
+#brew cask install qlcolorcode
+#brew cask install qlimagesize
+#brew cask install qlmarkdown
+##brew cask install qlprettypatch
+#brew cask install qlstephen
+#brew cask install qlvideo
+#brew cask install quicklook-csv
+#brew cask install quicklook-json
+#brew cask install webpquicklook
 
 # Remove outdated versions from the cellar.
 brew cleanup

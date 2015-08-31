@@ -95,6 +95,7 @@ brew install cabextract
 brew install winetricks --ignore-dependencies
 brew install gnupg
 brew install binutils
+brew install httpie
 
 # Ranger supplements
 brew install highlight
@@ -118,7 +119,7 @@ brew install tree
 
 # Use latest rsync rather than out-dated OS X rsync install separately from the
 # main formulae list to fix gh-19.
-brew install https://raw.github.com/Homebrew/homebrew-dupes/master/rsync.rb
+brew install homebrew/dupes/rsync
 
 # Link a some formulas
 brew linkapps mpv avidemux ppsspp openttd

@@ -1,9 +1,8 @@
-
 user_pref("browser.display.force_inline_alttext", true);
 //user_pref("browser.cache.disk.parent_directory", "/Volumes/disk/firefox/cache");
 user_pref("browser.sessionstore.max_tabs_undo", 25);
 user_pref("browser.sessionstore.max_windows_undo", 15);
-//user_pref("browser.uiCustomization.state", "{\"placements\":{\"PanelUI-contents\":[\"edit-controls\",\"zoom-controls\",\"new-window-button\",\"privatebrowsing-button\",\"save-page-button\",\"print-button\",\"fullscreen-button\",\"find-button\",\"preferences-button\",\"add-ons-button\",\"sessionmanager-toolbar\",\"greasemonkey-tbb\",\"confmania-australis-button\"],\"addon-bar\":[\"addonbar-closebutton\",\"status-bar\"],\"PersonalToolbar\":[\"personal-bookmarks\"],\"nav-bar\":[\"urlbar-container\",\"fvd_checker_toolbutton\",\"history-panelmenu\",\"developer-button\",\"downloads-button\",\"action-button--jid1-dmjswvbpnk7a1qjetpack-github-notifier\",\"uacontrol-toolbarbutton\",\"restart-button\",\"tileview-buttonmenu\",\"webide-button\",\"https-everywhere-button\",\"bookmarks-menu-button\",\"umatrix-button\",\"ublock0-button\",\"toggle-button--jid1-xufzosoflzsoxgjetpack-res-styletoggle\"],\"TabsToolbar\":[\"tabbrowser-tabs\",\"tabmixScrollBox\",\"new-tab-button\",\"tabcounter-toolbar-item\",\"alltabs-button\",\"tabview-button\",\"tabmix-tabs-closebutton\"]},\"seen\":[\"confmania-australis-button\",\"umatrix-button\",\"ublock0-button\",\"action-button--jid1-dmjswvbpnk7a1qjetpack-github-notifier\",\"toggle-button--jid1-xufzosoflzsoxgjetpack-res-styletoggle\"],\"dirtyAreaCache\":[\"addon-bar\",\"PersonalToolbar\",\"nav-bar\",\"PanelUI-contents\",\"TabsToolbar\"],\"currentVersion\":4,\"newElementCount\":0}");
+//user_pref("browser.uiCustomization.state", " ");
 user_pref("extensions.tabmix.openNewTabNext", true);
 user_pref("extensions.tabmix.openTabNext", true);
 user_pref("extensions.tabmix.openTabNextInverse", false);
@@ -12,7 +11,7 @@ user_pref("browser.translation.engine", "yandex");
 user_pref("browser.translation.ui.show", true);
 user_pref("browser.translation.ui.welcomeMessageShown", false);
 user_pref("browser.translation.yandex.apiKeyOverride", "trnsl.1.1.20150714T152051Z.dcf78329220c491b.8a23e513159738809b9a82ac308d093a147aebf4");
-user_pref("browser.startup.page", -12);
+user_pref("browser.startup.page", 3);
 user_pref("browser.urlbar.suggest.searches", false);
 user_pref("browser.fullscreen.animate", false);
 user_pref("devtools.command-button-eyedropper.enabled", true);
@@ -21,15 +20,7 @@ user_pref("network.http.fast-fallback-to-IPv4", true);
 user_pref("network.http.redirection-limit", 20);
 user_pref("network.http.pipelining.abtest", false);
 user_pref("network.http.pipelining.aggressive", true);
-user_pref("network.http.pipelining.max-optimistic-requests", 112); //3
-user_pref("network.http.pipelining.maxrequests", 112); //12
-user_pref("network.http.pipelining.maxsize," 300000);
-user_pref("network.http.pipelining.read-timeout", 60000);
 user_pref("network.http.pipelining.reschedule-on-timeout", true);
-user_pref("network.http.pipelining.reschedule-timeout", 15000);
-user_pref("network.http.max-connections", 512); // 256
-user_pref("network.http.max-persistent-connections-per-proxy", 512); //256
-user_pref("network.http.max-persistent-connections-per-server", 512); //6
 user_pref("media.peerconnection.turn.disable", true);
 user_pref("media.peerconnection.use_document_iceservers", false);
 user_pref("media.peerconnection.video.enabled", false);
@@ -39,6 +30,7 @@ user_pref("browser.display.show_loading_image_placeholder", true);
 user_pref("extensions.openwith.manual.sEIyCa3m", "\"/usr/local/bin/zsh\" -c \"mpv '%s'; zsh -i\"");
 user_pref("extensions.openwith.manual.sEIyCa3m.name", "mpv");
 user_pref("extensions.openwith.order", "[\"a/google_chrome\",\"a/safari\",\"a/seamonkey\",\"m/sEIyCa3m\"]");
+user_pref("media.autoplay.enabled", false);
 
 
 // Отключает возможность перечисления плагинов через window.navigator.plugins[].
@@ -60,46 +52,46 @@ user_pref("experiments.manifest.uri", "");
 
 // disable Location-Aware Browsing
 // http://www.mozilla.org/en-US/firefox/geolocation/
-user_pref("geo.enabled",			false);
+user_pref("geo.enabled",      false);
 
 // don't reveal internal IPs
 // http://net.ipcalf.com/
-user_pref("media.peerconnection.enabled",			false);
+user_pref("media.peerconnection.enabled",      false);
 // getUserMedia
 // https://wiki.mozilla.org/Media/getUserMedia
 // https://developer.mozilla.org/en-US/docs/Web/API/Navigator
-user_pref("media.navigator.enabled",				false);
+user_pref("media.navigator.enabled",        false);
 // https://developer.mozilla.org/en-US/docs/Web/API/BatteryManager
-user_pref("dom.battery.enabled",				false);
+user_pref("dom.battery.enabled",        false);
 // https://wiki.mozilla.org/WebAPI/Security/WebTelephony
-user_pref("dom.telephony.enabled",				false);
+user_pref("dom.telephony.enabled",        false);
 // https://developer.mozilla.org/en-US/docs/Web/API/navigator.sendBeacon
-user_pref("beacon.enabled",					false);
+user_pref("beacon.enabled",          false);
 // https://developer.mozilla.org/en-US/docs/Mozilla/Preferences/Preference_reference/dom.event.clipboardevents.enabled
-user_pref("dom.event.clipboardevents.enabled",			false);
+user_pref("dom.event.clipboardevents.enabled",      false);
 // https://wiki.mozilla.org/Security/Reviews/Firefox/NavigationTimingAPI
-user_pref("dom.enable_performance",				false);
+user_pref("dom.enable_performance",        false);
 
 // speech recognition
 // https://dvcs.w3.org/hg/speech-api/raw-file/tip/speechapi.html
 // https://wiki.mozilla.org/HTML5_Speech_API
-user_pref("media.webspeech.recognition.enable",			false);
+user_pref("media.webspeech.recognition.enable",      false);
 
 // Disable getUserMedia screen sharing
 // https://mozilla.github.io/webrtc-landing/gum_test.html
-user_pref("media.getusermedia.screensharing.enabled",		false);
+user_pref("media.getusermedia.screensharing.enabled",    false);
 
 // disable sensor API
 // https://wiki.mozilla.org/Sensor_API
-user_pref("device.sensors.enabled",				false);
+user_pref("device.sensors.enabled",        false);
 
 // disable gamepad input
 // http://www.w3.org/TR/gamepad/
-user_pref("dom.gamepad.enabled",				false);
+user_pref("dom.gamepad.enabled",        false);
 
 // disable virtual reality devices
 // https://developer.mozilla.org/en-US/Firefox/Releases/36#Interfaces.2FAPIs.2FDOM
-user_pref("dom.vr.enabled",					false);
+user_pref("dom.vr.enabled",          false);
 
 /******************************************************************************
  * misc                                                                       *
@@ -107,29 +99,29 @@ user_pref("dom.vr.enabled",					false);
  ******************************************************************************/
 
 // default search engine
-user_pref("browser.search.defaultenginename",			"DuckDuckGo");
+user_pref("browser.search.defaultenginename", "DuckDuckGo");
 
 // http://kb.mozillazine.org/Clipboard.autocopy
-user_pref("clipboard.autocopy",					false);
+user_pref("clipboard.autocopy",          false);
 
 // Display an error message indicating the entered information is not a valid
 // URL instead of asking from google.
 // http://kb.mozillazine.org/Keyword.enabled#Caveats
-user_pref("keyword.enabled",					false);
+user_pref("keyword.enabled",          false);
 
 // don't try to guess where i'm trying to go!!! e.g.: "http://foo" -> "http://(prefix)foo(suffix)"
 // http://www-archive.mozilla.org/docs/end-user/domain-guessing.html
-user_pref("browser.fixup.alternate.enabled",			false);
+user_pref("browser.fixup.alternate.enabled",      false);
 
 // https://trac.torproject.org/projects/tor/wiki/doc/TorifyHOWTO/WebBrowsers
-user_pref("network.proxy.socks_remote_dns",			true);
+user_pref("network.proxy.socks_remote_dns",      true);
 
 // CIS 2.7.4 Disable Scripting of Plugins by JavaScript
-user_pref("security.xpconnect.plugin.unrestricted",		false);
+user_pref("security.xpconnect.plugin.unrestricted",    false);
 
 // CIS Mozilla Firefox 24 ESR v1.0.0 - 3.8 Set File URI Origin Policy
 // http://kb.mozillazine.org/Security.fileuri.strict_origin_policy
-user_pref("security.fileuri.strict_origin_policy",		true);
+user_pref("security.fileuri.strict_origin_policy",    true);
 
 /******************************************************************************
  * extensions / plugins                                                       *
@@ -137,10 +129,10 @@ user_pref("security.fileuri.strict_origin_policy",		true);
  ******************************************************************************/
 
 // flash - never activate
-user_pref("plugin.state.flash",					0);
+user_pref("plugin.state.flash",          0);
 
 // http://kb.mozillazine.org/Extensions.blocklist.enabled
-user_pref("extensions.blocklist.enabled",			true);
+user_pref("extensions.blocklist.enabled",      true);
 
 /******************************************************************************
  * firefox features / components                                              *
@@ -150,21 +142,21 @@ user_pref("extensions.blocklist.enabled",			true);
 // https://wiki.mozilla.org/Platform/Features/Telemetry
 // https://www.mozilla.org/en-US/legal/privacy/firefox.html#telemetry
 // https://wiki.mozilla.org/Security/Reviews/Firefox6/ReviewNotes/telemetry
-user_pref("toolkit.telemetry.enabled",			false);
+user_pref("toolkit.telemetry.enabled",      false);
 
 // disable collection of the data (the healthreport.sqlite* files)
-user_pref("datareporting.healthreport.service.enabled",	false);
+user_pref("datareporting.healthreport.service.enabled",  false);
 
 // Disable new tab tile ads & preload
 // http://www.thewindowsclub.com/disable-remove-ad-tiles-from-firefox
 // http://forums.mozillazine.org/viewtopic.php?p=13876331#p13876331
-user_pref("browser.newtab.preload",				false);
+user_pref("browser.newtab.preload",        false);
 // https://wiki.mozilla.org/Tiles/Technical_Documentation#Ping
-user_pref("browser.newtabpage.directory.ping",			"");
+user_pref("browser.newtabpage.directory.ping",      "");
 
 // disable heartbeat
 // https://wiki.mozilla.org/Advocacy/heartbeat
-user_pref("browser.selfsupport.url",				"");
+user_pref("browser.selfsupport.url",        "");
 
 /******************************************************************************
  * automatic connections                                                      *
@@ -174,31 +166,31 @@ user_pref("browser.selfsupport.url",				"");
 // disable link prefetching
 // http://kb.mozillazine.org/Network.prefetch-next
 // https://developer.mozilla.org/en-US/docs/Web/HTTP/Link_prefetching_FAQ#Is_there_a_preference_to_disable_link_prefetching.3F
-user_pref("network.prefetch-next",		true);
+user_pref("network.prefetch-next",    true);
 
 // https://support.mozilla.org/en-US/kb/how-stop-firefox-making-automatic-connections#w_geolocation-for-default-search-engine
-user_pref("browser.search.geoip.url",		"");
+user_pref("browser.search.geoip.url",    "");
 
 // http://kb.mozillazine.org/Network.dns.disablePrefetch
 // https://developer.mozilla.org/en-US/docs/Web/HTTP/Controlling_DNS_prefetching
-user_pref("network.dns.disablePrefetch",			true);
-user_pref("network.dns.disablePrefetchFromHTTPS",		true);
+user_pref("network.dns.disablePrefetch",      true);
+user_pref("network.dns.disablePrefetchFromHTTPS",    true);
 
 // https://wiki.mozilla.org/Privacy/Reviews/Necko
-user_pref("network.predictor.enabled",				false);
+user_pref("network.predictor.enabled",        false);
 
 // http://kb.mozillazine.org/Browser.search.suggest.enabled
-user_pref("browser.search.suggest.enabled",			false);
+user_pref("browser.search.suggest.enabled",      false);
 
 // disable SSDP
 // https://bugzil.la/1111967
-user_pref("browser.casting.enabled",				false);
+user_pref("browser.casting.enabled",        false);
 
 // https://support.mozilla.org/en-US/kb/how-stop-firefox-making-automatic-connections#w_mozilla-content
-user_pref("browser.aboutHomeSnippets.updateUrl",		"");
+user_pref("browser.aboutHomeSnippets.updateUrl",    "");
 
 // https://support.mozilla.org/en-US/kb/how-stop-firefox-making-automatic-connections#w_auto-update-checking
-user_pref("browser.search.update",				false);
+user_pref("browser.search.update",        false);
 
 /******************************************************************************
  * HTTP                                                                       *
@@ -206,19 +198,19 @@ user_pref("browser.search.update",				false);
  ******************************************************************************/
 
 // https://bugzilla.mozilla.org/show_bug.cgi?id=855326
-user_pref("security.csp.experimentalEnabled",			true);
+user_pref("security.csp.experimentalEnabled",      true);
 
 // http://kb.mozillazine.org/Network.http.sendRefererHeader#0
 // https://bugzilla.mozilla.org/show_bug.cgi?id=822869
 // Send a referer header with the target URI as the source
-user_pref("network.http.sendRefererHeader",			2); // value 1 cause auth problem, now 2
-user_pref("network.http.referer.spoofSource",			false);
+user_pref("network.http.sendRefererHeader",      2); // value 1 cause auth problem, now 2
+user_pref("network.http.referer.spoofSource",      false);
 // CIS Version 1.2.0 October 21st, 2011 2.4.3 Disable Referer from an SSL Website
-user_pref("network.http.sendSecureXSiteReferrer",		true);
+user_pref("network.http.sendSecureXSiteReferrer",    true);
 
 // CIS 2.5.1 Accept Only 1st Party Cookies
 // http://kb.mozillazine.org/Network.cookie.cookieBehavior#1
-user_pref("network.cookie.cookieBehavior",		1);
+user_pref("network.cookie.cookieBehavior",    1);
 
 // user-agent
 //user_pref("general.useragent.override", "Mozilla/5.0 (Windows NT 6.1; rv:31.0) Gecko/20100101 Firefox/31.0");
@@ -229,43 +221,43 @@ user_pref("network.cookie.cookieBehavior",		1);
  ******************************************************************************/
 
 // http://kb.mozillazine.org/Browser.cache.offline.enable
-user_pref("browser.cache.offline.enable",		false);
+user_pref("browser.cache.offline.enable",    false);
 
 // clear history when firefox closes
 // https://support.mozilla.org/en-US/kb/Clear%20Recent%20History#w_how-do-i-make-firefox-clear-my-history-automatically
-user_pref("privacy.sanitize.sanitizeOnShutdown",	true);
-user_pref("privacy.clearOnShutdown.cache",		true);
-user_pref("privacy.clearOnShutdown.cookies",		false);
-user_pref("privacy.clearOnShutdown.downloads",		true);
-user_pref("privacy.clearOnShutdown.formdata",		true);
-user_pref("privacy.clearOnShutdown.history",		true);
-user_pref("privacy.clearOnShutdown.offlineApps",	true);
-user_pref("privacy.clearOnShutdown.passwords",		true);
-user_pref("privacy.clearOnShutdown.sessions",		false);
-user_pref("privacy.clearOnShutdown.siteSettings",	false);
+user_pref("privacy.sanitize.sanitizeOnShutdown",  true);
+user_pref("privacy.clearOnShutdown.cache",    true);
+user_pref("privacy.clearOnShutdown.cookies",    false);
+user_pref("privacy.clearOnShutdown.downloads",    true);
+user_pref("privacy.clearOnShutdown.formdata",    true);
+user_pref("privacy.clearOnShutdown.history",    true);
+user_pref("privacy.clearOnShutdown.offlineApps",  true);
+user_pref("privacy.clearOnShutdown.passwords",    true);
+user_pref("privacy.clearOnShutdown.sessions",    false);
+user_pref("privacy.clearOnShutdown.siteSettings",  false);
 
 // don't remember browsing history
-user_pref("places.history.enabled",			false);
+user_pref("places.history.enabled",      false);
 
 // The cookie expires at the end of the session (when the browser closes).
 // http://kb.mozillazine.org/Network.cookie.lifetimePolicy#2
-user_pref("network.cookie.lifetimePolicy",		0);
+user_pref("network.cookie.lifetimePolicy",    0);
 
 // CIS Version 1.2.0 October 21st, 2011 2.5.2 Disallow Credential Storage
-user_pref("signon.rememberSignons",			true);
+user_pref("signon.rememberSignons",      true);
 
 // CIS Version 1.2.0 October 21st, 2011 2.5.6 Delete Search and Form History
-user_pref("browser.formfill.enable",			false);
-user_pref("browser.formfill.expire_days",		0);
+user_pref("browser.formfill.enable",      false);
+user_pref("browser.formfill.expire_days",    0);
 
 // CIS Version 1.2.0 October 21st, 2011 2.5.7 Clear SSL Form Session Data
 // http://kb.mozillazine.org/Browser.sessionstore.privacy_level#2
 // Store extra session data for unencrypted (non-HTTPS) sites only.
 // NOTE: CIS says 1, we use 2
-user_pref("browser.sessionstore.privacy_level",		2);
+user_pref("browser.sessionstore.privacy_level",    2);
 
 // https://bugzil.la/238789#c19
-user_pref("browser.helperApps.deleteTempFileOnExit",	true);
+user_pref("browser.helperApps.deleteTempFileOnExit",  true);
 
 /******************************************************************************
  * UI related                                                                 *
@@ -273,51 +265,51 @@ user_pref("browser.helperApps.deleteTempFileOnExit",	true);
  ******************************************************************************/
 
 // Webpages will not be able to affect the right-click menu
-//user_pref("dom.event.contextmenu.enabled",			false);
+//user_pref("dom.event.contextmenu.enabled",      false);
 
 // CIS 2.3.2 Disable Downloading on Desktop
-user_pref("browser.download.folderList",		2);
+user_pref("browser.download.folderList",    2);
 
 // always ask the user where to download
 // https://developer.mozilla.org/en/Download_Manager_preferences
-user_pref("browser.download.useDownloadDir",		false);
+user_pref("browser.download.useDownloadDir",    false);
 
 // https://wiki.mozilla.org/Privacy/Reviews/New_Tab
-user_pref("browser.newtabpage.enabled",			false);
+user_pref("browser.newtabpage.enabled",      false);
 
 // CIS Version 1.2.0 October 21st, 2011 2.1.2 Enable Auto Notification of Outdated Plugins
 // https://wiki.mozilla.org/Firefox3.6/Plugin_Update_Awareness_Security_Review
-user_pref("plugins.update.notifyUser",			false);
+user_pref("plugins.update.notifyUser",      false);
 
 // CIS Mozilla Firefox 24 ESR v1.0.0 - 3.6 Enable IDN Show Punycode
 // http://kb.mozillazine.org/Network.IDN_show_punycode
-user_pref("network.IDN_show_punycode",			true);
+user_pref("network.IDN_show_punycode",      true);
 
 // http://kb.mozillazine.org/About:config_entries#Browser
 // http://kb.mozillazine.org/Inline_autocomplete
-user_pref("browser.urlbar.autoFill",			true);
-user_pref("browser.urlbar.autoFill.typed",		true);
+user_pref("browser.urlbar.autoFill",      true);
+user_pref("browser.urlbar.autoFill.typed",    true);
 
 // http://www.labnol.org/software/browsers/prevent-firefox-showing-bookmarks-address-location-bar/3636/
 // http://kb.mozillazine.org/Browser.urlbar.maxRichResults
 // "Setting the preference to 0 effectively disables the Location Bar dropdown entirely."
-user_pref("browser.urlbar.maxRichResults",		14);
+user_pref("browser.urlbar.maxRichResults",    14);
 
 // https://blog.mozilla.org/security/2010/03/31/plugging-the-css-history-leak/
 // http://dbaron.org/mozilla/visited-privacy
-user_pref("layout.css.visited_links_enabled",		false);
+user_pref("layout.css.visited_links_enabled",    false);
 
 // http://kb.mozillazine.org/Places.frecency.unvisited%28place_type%29Bonus
 
 // http://kb.mozillazine.org/Disabling_autocomplete_-_Firefox#Firefox_3.5
-user_pref("browser.urlbar.autocomplete.enabled",	true);
+user_pref("browser.urlbar.autocomplete.enabled",  true);
 
 // http://kb.mozillazine.org/Signon.autofillForms
 // https://www.torproject.org/projects/torbrowser/design/#identifier-linkability
-user_pref("signon.autofillForms",			false);
+user_pref("signon.autofillForms",      false);
 
 // do not check if firefox is the default browser
-user_pref("browser.shell.checkDefaultBrowser",		false);
+user_pref("browser.shell.checkDefaultBrowser",    false);
 
 /******************************************************************************
  * TLS / HTTPS / OCSP related stuff                                           *
@@ -325,20 +317,20 @@ user_pref("browser.shell.checkDefaultBrowser",		false);
  ******************************************************************************/
 
 // CIS Version 1.2.0 October 21st, 2011 2.2.4 Enable Online Certificate Status Protocol
-user_pref("security.OCSP.enabled",			true);
+user_pref("security.OCSP.enabled",      true);
 
 // require certificate revocation check through OCSP protocol.
 // NOTICE: this leaks information about the sites you visit to the CA.
-user_pref("security.OCSP.require",			true);
+user_pref("security.OCSP.require",      true);
 
 // pinning
 // https://wiki.mozilla.org/SecurityEngineering/Public_Key_Pinning#How_to_use_pinning
 // "2. Strict. Pinning is always enforced."
-user_pref("security.cert_pinning.enforcement_level",	2);
+user_pref("security.cert_pinning.enforcement_level",  2);
 
 // https://wiki.mozilla.org/Security:Renegotiation#security.ssl.treat_unsafe_negotiation_as_broken
 // see also CVE-2009-3555
-user_pref("security.ssl.treat_unsafe_negotiation_as_broken",	true);
+user_pref("security.ssl.treat_unsafe_negotiation_as_broken",  true);
 
 // https://support.mozilla.org/en-US/kb/certificate-pinning-reports
 //
@@ -347,7 +339,7 @@ user_pref("security.ssl.treat_unsafe_negotiation_as_broken",	true);
 // chooses to do so.
 //
 // you can test this at https://pinningtest.appspot.com/
-user_pref("security.ssl.errorReporting.automatic",		false);
+user_pref("security.ssl.errorReporting.automatic",    false);
 
 /******************************************************************************
  * CIPHERS                                                                    *
@@ -737,11 +729,6 @@ user_pref("network.predictor.max-db-size", 0);
 // Запрещает сайтам установку соединений на критически важные порты, занятые I2P и Tor.
 user_pref("network.security.ports.banned", "4444,9050,9051");
 
-// Отключает Google Safebrowsing. Раньше можно было еще не отключать, пока они только отдавали базу
-// хэшей малварных URL и браузер сверялся с локальной копией. Но сейчас Гугл заставляет посылать хэш
-// каждого загружаемого пользователем файла (якобы для проверки на вирусы), что уже совершенно
-// неприемлемо. Желающие могут установить себе подписку Malware Domains для uBlock Origin, которая
-// включает в себя URL из Safebrowsing и не следит за пользователем.
 // https://blog.mozilla.org/security/2014/07/23/improving-malware-detection-in-firefox/
 // https://support.mozilla.org/en-US/kb/how-stop-firefox-making-automatic-connections#w_anti-phishing-list-updating
 user_pref("browser.safebrowsing.enabled", false);

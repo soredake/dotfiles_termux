@@ -53,4 +53,4 @@ mkdir ~/.rtorrent-session
 mkdir ~/Documents/soft
 mkdir ~/Documents/github
 mkdir ~/Movies/records
-mkdir ~/Library/Application\ Support/Firefox/Profiles/u4u84drs.default
+mkdir ~/Library/Application\ Support/Firefox/Profiles/v036qpmg.susekaboss

@@ -41,6 +41,7 @@
     usePreviewTabs: true
   "tree-view":
     hideIgnoredNames: true
+    hideVcsIgnoredFiles: true
   "symbols-tree-view":
     autoToggle: true
   minimap:
@@ -56,6 +57,8 @@
   "smart-tab-name": {}
   "git-projects":
     rootPath: "/Users/susekaboss/Documents/github/"
+  "remote-atom":
+    keep_alive: true
 minimap:
   plugins:
     "git-diff": false

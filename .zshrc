@@ -15,7 +15,7 @@ ZSH_THEME="bureau"
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
@@ -49,15 +49,25 @@ ZSH_THEME="bureau"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git atom brew brew-cask battery common-aliases dircycle dirhistory tmuxinator tmux osx nyan npm nvm git-extras web-search)
+plugins=(themes emoji-clock gpg-agent mosh rsync safe-paste ssh-agent cp colored-man colorize copydir copyfile extract git atom brew brew-cask battery common-aliases tmuxinator tmux osx nyan npm nvm git-extras zsh_reload lol rand-quote)
+# vi-mode cause problems
 
 # User configuration
+# Add additional directories to the path.
+pathadd() {
+  [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]] && PATH="${PATH:+"$PATH:"}$1"
+}
 
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-# export MANPATH="/usr/local/man:$MANPATH"
+PATH=/usr/local/bin":$PATH" # Prefer brew packages.
+pathadd /opt/local/bin
+pathadd $HOME/bin
+pathadd $HOME/npm/bin
+pathadd /usr/local/sbin
+export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.private
+source ~/.iterm2_shell_integration.`basename $SHELL`
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
@@ -69,6 +79,11 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
   export EDITOR='atom'
 fi
+
+# Don't hash directories on the path a time, which allows new
+# binaries in $PATH to be executed without rehashing.
+setopt nohashdirs
+
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
@@ -244,7 +259,7 @@ alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date
 
 # Get OS X Software Updates, update installed Ruby gems, Homebrew, npm, and their
 # installed packages.
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm update -g; pipupdate; gem update --system; gem update;'
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm update -g; pipupdate; pip3update; gem update --system; gem update;'
 
 # What's my IP address.
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -280,11 +295,12 @@ alias usd="cconv 1 usd uah"
 alias uah="cconv 1 uah usd"
 
 # Update all Python packages installed via Pip.
-alias pipupdate="pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U"
+alias pipupdate="pip2 freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip2 install -U"
+alias pip3update="pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U & pip3 install --upgrade pip"
 
 # Chaturbate records
-function chatrec(){
-  livestreamer -p 'mpv --stream-capture=$1_$RANDOM.mp4 --title=$1 --cache 8192' chaturbate.com/$1 best
+chatrec(){
+  livestreamer -p "mpv --stream-capture=$1_$RANDOM.mp4 --title=$1 --cache 8192" chaturbate.com/$1 best
 }
 
 # Create a new directory and enter it.
