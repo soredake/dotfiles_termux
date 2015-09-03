@@ -37,11 +37,12 @@ sudo apt-get install bzip2
 sudo apt-get install cpufrequtils
 sudo apt-get install make
 sudo apt-get install g++
-sudo apt-get install -y build-essential
+sudo apt-get install build-essential
+sudo apt-get install vsftpd
 
 # Install iojs
 su -c "curl -sL https://deb.nodesource.com/setup_iojs_3.x | bash -"
-sudo apt-get install -y iojs
+sudo apt-get install iojs
 
 # Install nvm
 #curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.26.1/install.sh | sudo NVM_DIR=/usr/local/nvm bash

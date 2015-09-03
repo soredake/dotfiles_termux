@@ -54,14 +54,18 @@ plugins=(git common-aliases dircycle dirhistory tmuxinator tmux nyan npm nvm git
 # User configuration
 
 # Add additional directories to the path.
-pathadd() {
+function pathadd() {
   [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]] && PATH="${PATH:+"$PATH:"}$1"
 }
 
-PATH=/usr/local/bin":$PATH" # Prefer brew packages.
+pathadd /usr/local/bin # Prefer brew packages.
 pathadd /opt/local/bin
 pathadd $HOME/bin
 pathadd $HOME/npm/bin
+pathadd $HOME/.linuxbrew/bin:$PATH
+
+export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
+export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
 
 export MANPATH="/usr/local/man:$MANPATH"
 
