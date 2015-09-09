@@ -6,6 +6,9 @@ sudo -v
 # Keep-alive: update existing `sudo` timestamp until we're done.
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+# Setup linux.
+source linux.sh
+
 # Setup dotfiles.
 source dotfiles.sh
 
@@ -18,9 +21,6 @@ source node.sh
 # Install Pyton packages.
 source python.sh
 
-# Setup linux.
-source linux.sh
-
 # Install zsh.
 ZSHPATH=/usr/bin/zsh
 echo $ZSHPATH | sudo tee -a /etc/shells
@@ -28,9 +28,3 @@ chsh -s $ZSHPATH
 
 # Install ruby gems.
 source ruby.sh
-
-# Create dirs
-mkdir ~/Downloads/torrents
-
-# fix
-sudo chown -R $USER /usr/local/nvm/

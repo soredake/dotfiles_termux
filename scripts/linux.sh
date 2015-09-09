@@ -9,3 +9,11 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # TODO: Add settings here
 adduser user --quiet
 adduser user sudo
+
+# Login as user
+su - user
+# Create dirs
+mkdir ~/.npm
+
+# Own npm folder
+sudo chown -R $USER ~/.npm
