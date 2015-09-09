@@ -17,6 +17,9 @@ sudo apt-get update
 # Upgrade any already-installed packages.
 sudo apt-get upgrade
 
+# TODO: Wrote this line
+sudo apt-get dist-upgrade
+
 # Install packages
 #sudo apt-get install cpufrequtils
 

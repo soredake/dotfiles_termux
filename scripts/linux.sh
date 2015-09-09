@@ -12,6 +12,7 @@ adduser user sudo
 
 # Login as user
 su - user
+
 # Create dirs
 mkdir ~/.npm
 
