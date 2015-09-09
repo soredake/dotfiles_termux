@@ -12,7 +12,7 @@ function doIt() {
   fi
 
   rsync --exclude ".private" \
-  --exclude ".git/" --exclude "scripts/" --exclude ".config/cmus" --exclude "installer‑config.txt" \
+  --exclude ".git/" --exclude "scripts/" --exclude ".config/cmus" --exclude "installer‑config.txt" --exclude "ZSH.md" \
   --exclude "BASH.md" --exclude "dotfiles.sh" --exclude "GIT.md" \
   --exclude "LICENSE" --exclude "README.md" \
   -avh --no-perms . ~;

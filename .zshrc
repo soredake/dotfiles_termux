@@ -61,7 +61,7 @@ function pathadd() {
 pathadd /usr/local/bin # Prefer brew packages.
 pathadd /opt/local/bin
 pathadd $HOME/bin
-pathadd $HOME/npm/bin
+pathadd $HOME/.npm/bin
 pathadd $HOME/.linuxbrew/bin
 
 export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
