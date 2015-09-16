@@ -1,12 +1,56 @@
+user_pref("browser.uiCustomization.state", "{\"placements\":{\"PanelUI-contents\":[\"edit-controls\",\"zoom-controls\",\"search-container\",\"new-window-button\",\"e10s-button\",\"privatebrowsing-button\",\"save-page-button\",\"print-button\",\"history-panelmenu\",\"fullscreen-button\",\"add-ons-button\",\"find-button\",\"preferences-button\",\"sessionmanager-toolbar\",\"sessionmanager-undo\",\"greasemonkey-tbb\",\"confmania-australis-button\",\"openwith-widget\",\"spenibus_cors_everywhere_button_toggle\",\"fvd_checker_toolbutton\",\"feed-button\"],\"nav-bar\":[\"urlbar-container\",\"bookmarks-menu-button\",\"developer-button\",\"pocket-button\",\"downloads-button\",\"webide-button\",\"action-button--jid1-dmjswvbpnk7a1qjetpack-github-notifier\",\"ublock0-button\",\"umatrix-button\",\"ctraddon_back-forward-button\",\"ctraddon_appbutton\",\"https-everywhere-button\",\"flashgot-tbb-all\",\"ctraddon_puib_separator\",\"ctraddon_panelui-button\",\"flashgot-media-tbb\"],\"TabsToolbar\":[\"tabbrowser-tabs\",\"tabmixScrollBox\",\"new-tab-button\",\"tabcounter-toolbar-item\",\"alltabs-button\",\"tabview-button\",\"tabmix-tabs-closebutton\",\"ctraddon_tabs-closebutton\"],\"PersonalToolbar\":[\"personal-bookmarks\"],\"addon-bar\":[\"addonbar-closebutton\",\"status-bar\"],\"liberator-statusline\":[\"liberator-mode-toolbar\",\"liberator-message-toolbar\",\"liberator-status\"],\"ctraddon_addon-bar\":[\"ctraddon_addonbar-close\",\"customizableui-special-spring1\",\"ctraddon_statusbar\"],\"ctraddon_extra-bar\":[\"customizableui-special-spring2\"]},\"seen\":[\"webide-button\",\"confmania-australis-button\",\"action-button--jid1-dmjswvbpnk7a1qjetpack-github-notifier\",\"ublock0-button\",\"umatrix-button\",\"openwith-widget\",\"openwith-widewidget\"],\"dirtyAreaCache\":[\"PersonalToolbar\",\"nav-bar\",\"TabsToolbar\",\"PanelUI-contents\",\"addon-bar\",\"liberator-statusline\",\"ctraddon_addon-bar\",\"ctraddon_extra-bar\"],\"currentVersion\":4,\"newElementCount\":70}");
 user_pref("browser.display.force_inline_alttext", true);
 //user_pref("browser.cache.disk.parent_directory", "/Volumes/disk/firefox/cache");
 user_pref("browser.sessionstore.max_tabs_undo", 25);
 user_pref("browser.sessionstore.max_windows_undo", 15);
-//user_pref("browser.uiCustomization.state", " ");
+user_pref("browser.slowStartup.notificationDisabled", true);
+user_pref("browser.slowStartup.maxSamples", 0);
+user_pref("browser.slowStartup.samples", 0);
+user_pref("browser.rights.3.shown", true);
+user_pref("browser.startup.homepage_override.mstone", "ignore");
+user_pref("startup.homepage_welcome_url", "");
+user_pref("startup.homepage_override_url", "");
+user_pref("browser.feeds.showFirstRunUI", false);
+user_pref("browser.shell.checkDefaultBrowser", false);
+user_pref("extensions.newtaboverride@agenedia.com.url", "about:blank")
+
+//tabmix prefs
+user_pref("extensions.tabmix.appearance_tab", 1);
+user_pref("extensions.tabmix.enablefiletype", false);
 user_pref("extensions.tabmix.openNewTabNext", true);
 user_pref("extensions.tabmix.openTabNext", true);
 user_pref("extensions.tabmix.openTabNextInverse", false);
 user_pref("extensions.tabmix.opentabfor.bookmarks", true);
+user_pref("extensions.tabmix.sessions.crashRecovery", false);
+user_pref("extensions.tabmix.sessions.crashed", true);
+user_pref("extensions.tabmix.sessions.manager", false);
+user_pref("extensions.tabmix.styles.unloadedTab", "{\"italic\":false,\"bold\":false,\"underline\":false,\"text\":true,\"textColor\":\"rgba(204,0,0,1)\",\"bg\":true,\"bgColor\":\"rgba(236,233,216,1)\",\"bgTopColor\":\"rgba(236,233,216,1)\"}");
+user_pref("extensions.tabmix.syncPrefs", true);
+user_pref("extensions.tabmix.unreadTab", false);
+
+//classicthemerestorer prefs
+user_pref("extensions.classicthemerestorer.anewtaburl", "about:blank");
+user_pref("extensions.classicthemerestorer.anewtaburlcb", true);
+user_pref("extensions.classicthemerestorer.appbutton", "appbutton_off");
+user_pref("extensions.classicthemerestorer.bmanimation", false);
+user_pref("extensions.classicthemerestorer.closetab", "closetab_forced");
+user_pref("extensions.classicthemerestorer.combrelstop", true);
+user_pref("extensions.classicthemerestorer.ctrreset", false);
+user_pref("extensions.classicthemerestorer.extraurlkeycb", true);
+user_pref("extensions.classicthemerestorer.fsaduration", false);
+user_pref("extensions.classicthemerestorer.hightabpososx", true);
+user_pref("extensions.classicthemerestorer.noconicons", true);
+user_pref("extensions.classicthemerestorer.pananimation", false);
+user_pref("extensions.classicthemerestorer.pref_actindx", 2);
+user_pref("extensions.classicthemerestorer.pref_actindx2", 4);
+user_pref("extensions.classicthemerestorer.tabfbold_unr", true);
+user_pref("extensions.classicthemerestorer.tabs", "tabs_default");
+user_pref("extensions.classicthemerestorer.tabtextc_pen", false);
+user_pref("extensions.classicthemerestorer.tabtextc_unr", false);
+user_pref("extensions.classicthemerestorer.tabtextsh_pen", false);
+user_pref("extensions.classicthemerestorer.tabtextsh_unr", false);
+user_pref("extensions.classicthemerestorer.urlbardropm", true);
+
 user_pref("browser.translation.engine", "yandex");
 user_pref("browser.translation.ui.show", true);
 user_pref("browser.translation.ui.welcomeMessageShown", false);
@@ -21,21 +65,15 @@ user_pref("network.http.redirection-limit", 20);
 user_pref("network.http.pipelining.abtest", false);
 user_pref("network.http.pipelining.aggressive", true);
 user_pref("network.http.pipelining.reschedule-on-timeout", true);
-user_pref("media.peerconnection.turn.disable", true);
 user_pref("media.peerconnection.use_document_iceservers", false);
-user_pref("media.peerconnection.video.enabled", false);
 user_pref("media.peerconnection.identity.timeout", 1);
 user_pref("browser.pagethumbnails.capturing_disabled", true);
 user_pref("browser.display.show_loading_image_placeholder", true);
 user_pref("extensions.openwith.manual.sEIyCa3m", "\"/usr/local/bin/zsh\" -c \"mpv '%s'; zsh -i\"");
 user_pref("extensions.openwith.manual.sEIyCa3m.name", "mpv");
 user_pref("extensions.openwith.order", "[\"a/google_chrome\",\"a/safari\",\"a/seamonkey\",\"m/sEIyCa3m\"]");
-user_pref("media.autoplay.enabled", false);
+user_pref("media.autoplay.enabled", true);
 
-
-// Отключает возможность перечисления плагинов через window.navigator.plugins[].
-// https://hg.mozilla.org/releases/mozilla-esr38/file/a9be9167d92b/modules/libpref/init/all.js#l2309
-user_pref("plugins.enumerable_names", "");
 
 // Отключает эксперименты - фоновые тесты различных отключенных пока по умолчанию функций (вроде
 // HTTP Pipelining) со сбором телеметрии.
@@ -115,9 +153,6 @@ user_pref("browser.fixup.alternate.enabled",      false);
 
 // https://trac.torproject.org/projects/tor/wiki/doc/TorifyHOWTO/WebBrowsers
 user_pref("network.proxy.socks_remote_dns",      true);
-
-// CIS 2.7.4 Disable Scripting of Plugins by JavaScript
-user_pref("security.xpconnect.plugin.unrestricted",    false);
 
 // CIS Mozilla Firefox 24 ESR v1.0.0 - 3.8 Set File URI Origin Policy
 // http://kb.mozillazine.org/Security.fileuri.strict_origin_policy
@@ -299,8 +334,6 @@ user_pref("browser.urlbar.maxRichResults",    14);
 // http://dbaron.org/mozilla/visited-privacy
 user_pref("layout.css.visited_links_enabled",    false);
 
-// http://kb.mozillazine.org/Places.frecency.unvisited%28place_type%29Bonus
-
 // http://kb.mozillazine.org/Disabling_autocomplete_-_Firefox#Firefox_3.5
 user_pref("browser.urlbar.autocomplete.enabled",  true);
 
@@ -321,7 +354,7 @@ user_pref("security.OCSP.enabled",      true);
 
 // require certificate revocation check through OCSP protocol.
 // NOTICE: this leaks information about the sites you visit to the CA.
-user_pref("security.OCSP.require",      true);
+//user_pref("security.OCSP.require",      true); #NOTE: causing page loading problems and ocsp erros
 
 // pinning
 // https://wiki.mozilla.org/SecurityEngineering/Public_Key_Pinning#How_to_use_pinning
@@ -382,7 +415,6 @@ user_pref("browser.cache.memory.max_entry_size", 52428);
 // Еще проще и надежнее определяется наличие файлов в кэше по значениям заголовков If-Modified-Since
 // и If-None-Match (https://en.wikipedia.org/wiki/HTTP_ETag), которые также могут быть использованы
 // и для прямого трекинга (отдавая пользователям файл с уникальным Last-Modified и/или ETag).
-user_pref("network.http.use-cache", true);
 user_pref("browser.cache.memory.enable", true);
 user_pref("media.cache_size", 512000);
 user_pref("image.cache.size", 512000);
@@ -400,11 +432,6 @@ user_pref("security.ssl.errorReporting.enabled", false);
 user_pref("security.ssl.errorReporting.automatic", false);
 user_pref("security.ssl.errorReporting.url", "");
 
-// Разрешить запрос HTTP-аунтефикации при загрузке только самого документа, но не его ресурсов.
-// https://bugzilla.mozilla.org/show_bug.cgi?id=647010
-// https://mxr.mozilla.org/mozilla-beta/source/modules/libpref/init/all.js?rev=e549349b8d66#1717
-user_pref("network.auth.allow-subresource-auth", 0);
-
 // Отключает проигрывание в браузере не эмбеднутых аудио и видео при переходе по прямой ссылке
 // на .webm/.mp3/etc. Вместо проигрывания вызовется сохранение файла.
 user_pref("media.play-stand-alone", false);
@@ -412,10 +439,6 @@ user_pref("media.play-stand-alone", false);
 // Запрещает передачу сайтам подробной информации о графических возможностях системы.
 user_pref("webgl.disable-extensions", true);
 user_pref("webgl.min_capability_mode", true);
-
-// Отключает Audio Data API (от которого уже отказались в пользу Web Audio API).
-// https://wiki.mozilla.org/Audio_Data_API
-user_pref("media.audio_data.enabled", false);
 
 // Запрещает сайтам обращение к локальной машине, что позволило бы им анализировать список открытых
 // портов. Подсмотрено у разработчиков Tor (https://trac.torproject.org/projects/tor/ticket/10686).
@@ -437,9 +460,6 @@ user_pref("browser.cache.offline.enable", true);
 
 // Отключает Speed Dial, потребляющий процессорное время и замедляющий открытие новых вкладок.
 user_pref("browser.newtabpage.enabled", false);
-
-// Отключает угадывание доменного имени при помощи подстановки www и разных TLD.
-user_pref("browser.fixup.alternate.enabled", false);
 
 // Отключает автодетект изменения состояния сетевого подключения и связанную с ним самодеятельность
 // вроде рефреша DNS-кэша. -- https://bugzilla.mozilla.org/show_bug.cgi?id=939318
@@ -620,7 +640,33 @@ user_pref("loop.contextInConversations.enabled", false);
 // Отключает поддержку Encrypted Media Extensions (DRM для HTML5-видео).
 user_pref("media.eme.enabled", false);
 user_pref("media.eme.apiVisible", false);
+// Отключает предложения включить EME.
+// https://hg.mozilla.org/releases/mozilla-esr38/file/704989f295eb/browser/base/content/browser-eme.js#l55
+user_pref("browser.eme.ui.enabled", false);
 user_pref("media.gmp-eme-adobe.enabled", false);
+user_pref("media.gmp-eme-adobe.autoupdate", false);
+
+// Отключает загрузку бинарника H.264-кодека от Cisco (будет использоваться GStreamer).
+// https://hg.mozilla.org/releases/mozilla-esr38/file/0f8338121472/toolkit/modules/GMPUtils.jsm#l70
+// https://support.mozilla.org/en-US/kb/how-stop-firefox-making-automatic-connections#w_openh264-codec
+user_pref("media.gmp-gmpopenh264.autoupdate", false);
+user_pref("media.gmp-gmpopenh264.enabled", false);
+user_pref("media.fragmented-mp4.gmp.enabled", false);
+user_pref("media.gmp-provider.enabled", false);
+user_pref("media.gmp-manager.url", "");
+// https://hg.mozilla.org/releases/mozilla-esr38/file/0f8338121472/modules/libpref/init/all.js#l4496
+user_pref("media.gmp-manager.cert.requireBuiltIn", true);
+user_pref("media.gmp-manager.cert.checkAttributes", true);
+user_pref("media.gmp-manager.certs.1.commonName", "");
+user_pref("media.gmp-manager.certs.1.issuerName", "");
+user_pref("media.gmp-manager.certs.2.commonName", "");
+user_pref("media.gmp-manager.certs.2.issuerName", "");
+// https://github.com/The-OP/Fox/issues/25
+// https://hg.mozilla.org/releases/mozilla-esr38/file/0f8338121472/toolkit/modules/GMPUtils.jsm#l84
+// https://hg.mozilla.org/releases/mozilla-esr38/file/0f8338121472/toolkit/modules/GMPInstallManager.jsm#l384
+// https://hg.mozilla.org/releases/mozilla-esr38/file/0f8338121472/toolkit/modules/GMPInstallManager.jsm#l337
+user_pref("media.gmp-manager.lastCheck", 1437696000); // 2015-07-24, 00:00 UTC
+user_pref("media.gmp-manager.secondsBetweenChecks", 630720000); // 20 лет.
 
 // Полностью отключает WebIDE, убирает его кнопку и из меню Developer Tools.
 user_pref("devtools.webide.enabled", false);
@@ -737,9 +783,6 @@ user_pref("browser.safebrowsing.malware.enabled", false);
 user_pref("browser.safebrowsing.downloads.enabled", false);
 user_pref("browser.safebrowsing.downloads.remote.enabled", false);
 // https://support.mozilla.org/en-US/kb/how-stop-firefox-making-automatic-connections#w_anti-malware-list-updating
-user_pref("browser.safebrowsing.appRepURL", "");
-user_pref("browser.safebrowsing.gethashURL", "");
-user_pref("browser.safebrowsing.malware.reportURL", "");
 user_pref("browser.safebrowsing.reportPhishURL", "");
 user_pref("browser.safebrowsing.updateURL", "");
 
@@ -749,8 +792,6 @@ user_pref("browser.safebrowsing.updateURL", "");
 // https://wiki.mozilla.org/Polaris
 user_pref("privacy.trackingprotection.enabled", false);
 user_pref("privacy.trackingprotection.pbmode.enabled", false);
-user_pref("browser.trackingprotection.updateURL", "");
-user_pref("browser.trackingprotection.gethashURL", "");
 
 // Вообще не регистрировать таблицы Safebrowsing и Tracking Protection в URL Classifier, пусть даже
 // в отключенном виде и с пустыми URL для обновления.
@@ -808,6 +849,9 @@ user_pref("toolkit.telemetry.server", "");
 user_pref("toolkit.telemetry.archive.enabled", false);
 // https://wiki.mozilla.org/Unified_Telemetry
 user_pref("toolkit.telemetry.unified", false);
+// https://hg.mozilla.org/releases/mozilla-beta/file/0f8e1375f717/browser/app/profile/firefox.js#l1904
+// https://hg.mozilla.org/releases/mozilla-beta/file/0f8e1375f717/toolkit/components/telemetry/TelemetryController.jsm#l628
++user_pref("toolkit.telemetry.optoutSample", false);
 // Отключает отправку информации о падениях браузера в Mozilla (about:crashes).
 user_pref("breakpad.reportURL", "");
 user_pref("dom.ipc.plugins.flash.subprocess.crashreporter.enabled", false);
@@ -892,3 +936,22 @@ user_pref("browser.urlbar.suggest.searches", false);
 
 // Отключает обязательную проверку наличия подписи у аддона, без которой он не даст установить его.
 user_pref("xpinstall.signatures.required", false);
+
+
+// Маскировка браузера под версию 38.2 ESR и самую распространённую платформу. Не забываем обновлять
+// по мере выхода очередных ESR.
+// https://developer.mozilla.org/en-US/docs/Web/HTTP/Gecko_user_agent_string_reference
+// https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID
+// http://www.w3.org/html/wg/drafts/html/master/webappapis.html#the-navigator-object
+// window.navigator.appName
+user_pref("general.appname.override", " ");
+// window.navigator.appVersion
+user_pref("general.appversion.override", " ");
+// window.navigator.oscpu
+user_pref("general.oscpu.override", " ");
+// window.navigator.platform
+user_pref("general.platform.override", " ");
+// HTTP User-Agent, window.navigator.userAgent
+user_pref("general.useragent.override", "Mozilla/5.0 (Macintosh; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0");
+// window.navigator.buildID
+user_pref("general.buildID.override", "20150806103657");

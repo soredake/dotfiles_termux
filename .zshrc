@@ -49,7 +49,8 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(themes emoji-clock gpg-agent mosh rsync safe-paste ssh-agent cp colored-man colorize copydir copyfile extract git atom brew brew-cask battery common-aliases tmuxinator tmux osx nyan npm nvm git-extras zsh_reload lol rand-quote)
+plugins=(themes emoji-clock mosh rsync safe-paste ssh-agent cp colored-man colorize copydir copyfile extract git atom brew brew-cask battery common-aliases tmuxinator tmux osx nyan npm nvm git-extras zsh_reload lol rand-quote)
+#gpg-agent
 # vi-mode cause problems
 
 # User configuration
@@ -57,8 +58,8 @@ plugins=(themes emoji-clock gpg-agent mosh rsync safe-paste ssh-agent cp colored
 pathadd() {
   [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]] && PATH="${PATH:+"$PATH:"}$1"
 }
-
-PATH=/usr/local/bin":$PATH" # Prefer brew packages.
+export PATH=$PATH:/opt/pkg/sbin:/opt/pkg/bin
+pathadd /usr/local/bin
 pathadd /opt/local/bin
 pathadd $HOME/bin
 pathadd $HOME/npm/bin
@@ -70,8 +71,8 @@ source $HOME/.private
 source ~/.iterm2_shell_integration.`basename $SHELL`
 
 # You may need to manually set your language environment
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
+export LANG=ru_RU.UTF-8
+export LC_ALL=ru_RU.UTF-8
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -98,8 +99,8 @@ setopt nohashdirs
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # NVM.
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+#export NVM_DIR=~/.nvm
+#source $(brew --prefix nvm)/nvm.sh
 
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards.
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2 | tr ' ' '\n')" scp sftp ssh;
@@ -158,7 +159,7 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications";
 # Keep a reasonably long history.
 # export HISTSIZE=4096;
 # Keep a super long history.
-export HISTSIZE=32768;
+export HISTSIZE=500;
 
 # Keep even more history lines inside the file, so we can still look up
 # previous commands without needlessly cluttering the current shell's history.
@@ -180,6 +181,9 @@ export HISTIGNORE="ls:cd:cd:ll:ls:la:history -:pwd:exit:date:* --help";
 # Make new shells get the history lines from all previous shells instead of the
 # default "last window closed" history.
 export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+
+# Brew command not found
+if brew command command-not-found-init > /dev/null; then eval "$(brew command-not-found-init)"; fi
 
 # Enable SSH agent forwarding ("ForwardAgent yes"/"ssh -A") with persistent
 # screen sessions.
@@ -214,11 +218,11 @@ fi;
 # command word following the alias is also checked for alias expansion."
 alias sudo='sudo ';
 
-# Be nice!
+# Be nice! @TODO: It needed?
 alias please='sudo'
 alias plz='please'
 
-# Auto-correct last input.
+# Auto-correct last input. @TODO: This works?
 alias fuck='$(thefuck $(fc -ln -1))'
 
 # Easier folder navigation.
@@ -259,7 +263,7 @@ alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date
 
 # Get OS X Software Updates, update installed Ruby gems, Homebrew, npm, and their
 # installed packages.
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm update -g; pipupdate; pip3update; gem update --system; gem update;'
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm update -g; pip2update; pip3update; gem update --system; gem update;'
 
 # What's my IP address.
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -289,18 +293,38 @@ alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v exten
 
 # Lock the screen (when going AFK).
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+alias afk2="pmset displaysleepnow"
+
+# Rebuild caches
+alias rebkcache="rm -r -v /System/Library/Caches/com.apple.kext.caches/Startup/*"
+alias rebkcache2="touch /System/Library/Extenshions"
+alias rebkcache3="kextcache"
 
 # Currency conversions.
 alias usd="cconv 1 usd uah"
-alias uah="cconv 1 uah usd"
 
 # Update all Python packages installed via Pip.
-alias pipupdate="pip2 freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip2 install -U"
-alias pip3update="pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U & pip3 install --upgrade pip"
+alias pip2update="pip2 freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip2 install -U"
+alias pip3update="pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U"
+
+# Help firefox
+alias fxhelp ="find ~/Library/Application\ Support/Firefox/Profiles/ -name '*.sqlite' -print -exec sqlite3 {} 'VACUUM; REINDEX;' \;"
 
 # Chaturbate records
-chatrec(){
+function chatrec(){
   livestreamer -p "mpv --stream-capture=$1_$RANDOM.mp4 --title=$1 --cache 8192" chaturbate.com/$1 best
+}
+
+# Kext install
+function kextin(){
+  SOURCE_DIR="$(cd "$(dirname "$0")" > /dev/null; pwd)";
+  cd $SOURCE_DIR
+  echo 'Installing Kext...'
+  sudo cp -R "$BASEDIR/$1.kext" /Library/Extensions
+  sudo chmod -R 755 /Library/Extensions/$1.kext
+  sudo chown -R root:wheel /Library/Extensions/$1.kext
+  sudo kextload /Library/Extensions/$1.kext
+  echo 'Installation complete. If Kext not working proportley you may need a reboot.'
 }
 
 # Create a new directory and enter it.

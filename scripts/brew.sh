@@ -40,6 +40,8 @@ brew tap casidiablo/custom
 brew tap yawara/twister
 brew tap homebrew/php
 brew tap homebrew/dupes
+brew tap homebrew/command-not-found
+brew tap caskroom/unofficial
 
 # Install wine needed libs
 brew install libjpeg --universal
@@ -57,11 +59,11 @@ brew install wget --with-iri
 # brew install vim --override-system-vi
 brew install homebrew/dupes/grep --with-default-names
 brew install homebrew/dupes/openssh --with-libressl
-brew install homebrew/dupes/screen
+brew install homebrew/dupes/rsync
 
 # Install other useful binaries.
+#brew install nvm
 brew install --HEAD tox/tox/qtox
-brew install aredridel/iojs/iojs
 brew install avidemux
 brew install cataclysm
 brew install chocolate-doom
@@ -73,9 +75,12 @@ brew install dwarf-fortress
 brew install ffmpeg --with-openssl --without-qtkit --with-libssh
 brew install freeciv
 brew install git-extras
+brew install gnupg
 brew install htop-osx
-brew install mpv-player/mpv/mpv
-brew install nvm
+brew install httpie
+brew install mpv-player/mpv/mpv --with-x11
+brew install node --with-openssl
+brew install openssl && brew link --force openssl
 brew install openttd
 brew install pgcli
 brew install php56 --with-homebrew-curl
@@ -87,22 +92,23 @@ brew install ruby
 brew install screenbrightness
 brew install shellcheck
 brew install thefuck
-brew install tree
 brew install twister --HEAD
 brew install unrar
-brew install youtube-dl
-brew install cabextract
 brew install winetricks --ignore-dependencies
-brew install gnupg
-brew install binutils
-brew install httpie
+brew install youtube-dl
+brew install screenfetch
+brew install reattach-to-user-namespace --with-wrap-pbcopy-and-pbpaste --with-wrap-launchctl
 
-# Ranger supplements
+# Ranger deps
 brew install highlight
 brew install exiftool
 brew install w3m
 brew install ffmpegthumbnailer
 brew install media-info
+
+# Other deps
+brew install binutils
+brew install cabextract
 
 # brew install bfg
 # brew install ctags
@@ -116,10 +122,6 @@ brew install hub
 brew install rename
 brew install ssh-copy-id
 brew install tree
-
-# Use latest rsync rather than out-dated OS X rsync install separately from the
-# main formulae list to fix gh-19.
-brew install homebrew/dupes/rsync
 
 # Link a some formulas
 brew linkapps mpv avidemux ppsspp openttd

@@ -9,7 +9,6 @@
       ".DS_STORE"
       ".idea"
     ]
-    audioBeep: false
     disabledPackages: [
       "metrics"
       "quick-jump"

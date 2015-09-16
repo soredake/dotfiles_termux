@@ -29,11 +29,11 @@ brew tap caskroom/versions
 # brew cask install moom
 # brew cask install vienna
 #brew cask install alfred
+#brew cask install appzapper
 #brew cask install battle-net
 #brew cask install ccleaner
+#brew cask install qbittorrent
 #brew cask install screenflow
-#brew cask install appzapper
-brew cask install megasync
 brew cask install adobe-creative-cloud
 brew cask install atom
 brew cask install bettertouchtool
@@ -47,11 +47,13 @@ brew cask install dupeguru-pe
 brew cask install fenque/veracrypt/veracrypt
 brew cask install firefodeveloperedition
 brew cask install gimp
+brew cask install gitup
 brew cask install imagealpha
 brew cask install imageoptim
 brew cask install iterm2-nightly
 brew cask install keka
 brew cask install libreoffice-ru
+brew cask install megasync
 brew cask install mmex
 brew cask install musicbrainz-picard
 brew cask install mypaint
@@ -61,21 +63,22 @@ brew cask install openemu
 brew cask install paragon-ntfs
 brew cask install pongsaver
 brew cask install popcorn-time
-brew cask install qbittorrent
 brew cask install retroarch
+brew cask install sdformatter
 brew cask install shiftit
 brew cask install shotcut
 brew cask install skype
 brew cask install smcfancontrol
 brew cask install soundflower
+brew cask install spotify
 brew cask install steam
 brew cask install thunderbird-ru
 brew cask install torbrowser-ru
+brew cask install transmission
+brew cask install vagrant
 brew cask install vagrant
 brew cask install virtualbox
 brew cask install xquartz
-brew cask install spotify
-brew cask install gitup
 
 # Quick Look plugins.
 #brew cask install qlcolorcode
@@ -93,4 +96,4 @@ brew cleanup
 brew cask cleanup
 
 # Modify Alfred's search scope to include installed Casks.
-brew cask alfred
+#brew cask alfred
