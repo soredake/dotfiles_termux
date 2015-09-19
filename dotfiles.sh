@@ -7,8 +7,8 @@ git pull origin master;
 
 function doIt() {
   # Copy the ".bash/private" file only if it doesn't already exist.
-  if [ ! -f ~/.private ]; then
-    cp .private ~/.private
+  if [ ! -f ~/.init/.private ]; then
+    cp .init/.private ~/.init/.private
   fi
 
   # Symlink some config directories.
@@ -34,10 +34,11 @@ function doIt() {
   --exclude "LICENSE" --exclude "README.md" \
   -avh --no-perms . ~;
 
-  rsync -avh --no-perms long/firefox/profiles.ini $HOME/Library/Application\ Support/Firefox/profiles.ini
-  ln -s "$SOURCE_DIR/long/firefox/user.js" "$HOME/Library/Application Support/Firefox/Profiles/v036qpmg.susekaboss/user.js"
+  ln -s "$SOURCE_DIR/long/firefox/user.js" "$HOME/Library/Application Support/Firefox/Profiles/v036qpmg/user.js"
   rsync -avh --no-perms long/thunderbird/profiles.ini $HOME/Library/Thunderbird/profiles.ini
-  echo "Create symlink from $SOURCE_DIR/long/firefox/user.js to $HOME/Library/Application Support/Firefox/Profiles/v036qpmg.susekaboss/user.js"
+  rsync -avh --no-perms long/preferences/ $HOME/Library/Preferences/
+
+
 
 }
 

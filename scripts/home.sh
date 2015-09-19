@@ -53,4 +53,4 @@ mkdir ~/.rtorrent-session
 mkdir ~/Documents/soft
 mkdir ~/Documents/github
 mkdir ~/Movies/records
-mkdir ~/Library/Application\ Support/Firefox/Profiles/v036qpmg.susekaboss
+/Applications/FirefoxDeveloperEdition.app/Contents/MacOS/firefox -CreateProfile "User $HOME/Library/Application Support/Firefox/Profiles/profile"

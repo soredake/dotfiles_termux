@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 # Install Atom packages.
-apm install advanced-new-file
 apm install advanced-open-file
 apm install color-picker
 apm install dash

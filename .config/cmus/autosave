@@ -83,11 +83,11 @@ set show_current_bitrate=true
 set show_hidden=false
 set show_playback_position=true
 set show_remaining_time=false
-set shuffle=false
+set shuffle=true
 set skip_track_info=false
 set smart_artist_sort=true
 set softvol=true
-set softvol_state=30 30
+set softvol_state=40 40
 set status_display_program=/Users/susekaboss/Documents/soft/lastfm/status_display_program.sh
 set wrap_search=true
 bind browser backspace browser-up

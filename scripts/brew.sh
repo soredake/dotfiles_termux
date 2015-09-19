@@ -17,10 +17,6 @@ brew upgrade
 # Install GNU core utilities (those that come with OS X are outdated).
 brew install coreutils
 
-if ! [[ -L "/usr/local/bin/sha256sum" && -f "/usr/local/bin/sha256sum" ]]; then
-  sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
-fi
-
 # Install some other useful utilities like `sponge`.
 #brew install moreutils
 
@@ -56,13 +52,11 @@ brew install little-cms2 --universal
 brew install wget --with-iri
 
 # Install more recent versions of some OS X tools.
-# brew install vim --override-system-vi
 brew install homebrew/dupes/grep --with-default-names
 brew install homebrew/dupes/openssh --with-libressl
 brew install homebrew/dupes/rsync
 
 # Install other useful binaries.
-#brew install nvm
 brew install --HEAD tox/tox/qtox
 brew install avidemux
 brew install cataclysm
@@ -82,22 +76,23 @@ brew install mpv-player/mpv/mpv --with-x11
 brew install node --with-openssl
 brew install openssl && brew link --force openssl
 brew install openttd
+brew install p7zip
 brew install pgcli
 brew install php56 --with-homebrew-curl
 brew install ppsspp
 brew install python3
-brew install ranger
+brew install ranger --build-from-source
+brew install reattach-to-user-namespace --with-wrap-pbcopy-and-pbpaste --with-wrap-launchctl
 brew install rogue
 brew install ruby
 brew install screenbrightness
+brew install screenfetch
 brew install shellcheck
 brew install thefuck
 brew install twister --HEAD
 brew install unrar
 brew install winetricks --ignore-dependencies
 brew install youtube-dl
-brew install screenfetch
-brew install reattach-to-user-namespace --with-wrap-pbcopy-and-pbpaste --with-wrap-launchctl
 
 # Ranger deps
 brew install highlight
@@ -127,7 +122,7 @@ brew install tree
 brew linkapps mpv avidemux ppsspp openttd
 
 # Link formulas
-brew link curl --force
+brew link --force curl
 brew link --force gettext
 
 # Remove outdated versions from the cellar.

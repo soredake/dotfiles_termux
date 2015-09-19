@@ -12,6 +12,10 @@
     disabledPackages: [
       "metrics"
       "quick-jump"
+      "javascript-snippets"
+      "es6-javascript"
+      "enhanced-tabs"
+      "project-manager"
     ]
   "atom-ctags":
     autoBuildTagsWhenActive: true
@@ -24,11 +28,11 @@
     showErrorPanel: false
   editor:
     invisibles: {}
-    preferredLineLength: 120
+    preferredLineLength: 160
     showIndentGuide: true
-    softWrap: true
     backUpBeforeSaving: true
     showInvisibles: true
+    softWrap: true
   "tool-bar":
     position: "Left"
     visible: false
@@ -58,11 +62,17 @@
     rootPath: "/Users/susekaboss/Documents/github/"
   "remote-atom":
     keep_alive: true
-minimap:
-  plugins:
-    "git-diff": false
-"autocomplete-plus":
-  enableAutoActivation: false
+".plist.text.xml":
+  editor:
+    preferredLineLength: 120
+".plist.source":
+  editor:
+    preferredLineLength: 120
 editor:
   showIndentGuide: true
   softWrap: true
+"autocomplete-plus":
+  enableAutoActivation: false
+minimap:
+  plugins:
+    "git-diff": false
