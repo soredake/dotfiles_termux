@@ -15,7 +15,7 @@
       "javascript-snippets"
       "es6-javascript"
       "enhanced-tabs"
-      "project-manager"
+      "linter-shellcheck"
     ]
   "atom-ctags":
     autoBuildTagsWhenActive: true
@@ -68,11 +68,11 @@
 ".plist.source":
   editor:
     preferredLineLength: 120
-editor:
-  showIndentGuide: true
-  softWrap: true
-"autocomplete-plus":
-  enableAutoActivation: false
 minimap:
   plugins:
     "git-diff": false
+"autocomplete-plus":
+  enableAutoActivation: false
+editor:
+  showIndentGuide: true
+  softWrap: true

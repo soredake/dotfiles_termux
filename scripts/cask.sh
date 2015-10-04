@@ -24,7 +24,6 @@ brew tap caskroom/versions
 # brew cask install gitter
 # brew cask install google-drive
 # brew cask install google-earth
-# brew cask install java
 # brew cask install kaleidoscope
 # brew cask install moom
 # brew cask install vienna
@@ -32,13 +31,17 @@ brew tap caskroom/versions
 #brew cask install appzapper
 #brew cask install battle-net
 #brew cask install ccleaner
-#brew cask install qbittorrent
+#brew cask install dash
+#brew cask install gitup
+#brew cask install mmex
+#brew cask install noizio
+#brew cask install openemu
 #brew cask install screenflow
 brew cask install adobe-creative-cloud
+brew cask install aegisub
 brew cask install atom
-brew cask install bettertouchtool
+brew cask install audacity
 brew cask install cuda
-brew cask install dash
 brew cask install double-commander
 brew cask install dropbox
 brew cask install dupeguru
@@ -47,19 +50,16 @@ brew cask install dupeguru-pe
 brew cask install fenque/veracrypt/veracrypt
 brew cask install firefodeveloperedition
 brew cask install gimp
-brew cask install gitup
 brew cask install imagealpha
 brew cask install imageoptim
 brew cask install iterm2-nightly
-brew cask install keka
+brew cask install java
+brew cask install lastfm
 brew cask install libreoffice-ru
 brew cask install megasync
-brew cask install mmex
 brew cask install musicbrainz-picard
 brew cask install mypaint
-brew cask install noizio
 brew cask install obs
-brew cask install openemu
 brew cask install paragon-ntfs
 brew cask install pongsaver
 brew cask install popcorn-time
@@ -76,20 +76,8 @@ brew cask install thunderbird-ru
 brew cask install torbrowser-ru
 brew cask install transmission
 brew cask install vagrant
-brew cask install vagrant
 brew cask install virtualbox
 brew cask install xquartz
-
-# Quick Look plugins.
-#brew cask install qlcolorcode
-#brew cask install qlimagesize
-#brew cask install qlmarkdown
-##brew cask install qlprettypatch
-#brew cask install qlstephen
-#brew cask install qlvideo
-#brew cask install quicklook-csv
-#brew cask install quicklook-json
-#brew cask install webpquicklook
 
 # Remove outdated versions from the cellar.
 brew cleanup

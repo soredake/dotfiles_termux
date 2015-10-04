@@ -181,6 +181,6 @@
 [credential]
   helper = osxkeychain
 [http]
-  proxy = socks5://192.168.1.115:9050
+  proxy = socks5://localhost:9050
 [https]
-  proxy = socks5://192.168.1.115:9050
+  proxy = socks5://localhost:9050

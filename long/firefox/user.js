@@ -258,7 +258,7 @@ user_pref("browser.privatebrowsing.autostart",		false);
 // Clear history when Firefox closes
 // https://support.mozilla.org/en-US/kb/Clear%20Recent%20History#w_how-do-i-make-firefox-clear-my-history-automatically
 user_pref("privacy.sanitize.sanitizeOnShutdown",		false);
-user_pref("privacy.clearOnShutdown.cache",		true);
+user_pref("privacy.clearOnShutdown.cache",		false);
 user_pref("privacy.clearOnShutdown.cookies",		false);
 user_pref("privacy.clearOnShutdown.downloads",		true);
 user_pref("privacy.clearOnShutdown.formdata",		true);
@@ -276,14 +276,14 @@ user_pref("places.history.enabled",		false);
 user_pref("network.cookie.lifetimePolicy",		0); //2
 
 // http://kb.mozillazine.org/Browser.cache.disk.enable
-user_pref("browser.cache.disk.enable",		false);
+//user_pref("browser.cache.disk.enable",		false);
 
 // http://kb.mozillazine.org/Browser.cache.memory.enable
 //user_pref("browser.cache.memory.enable",		false);
 
 // CIS Version 1.2.0 October 21st, 2011 2.5.8 Disable Caching of SSL Pages
 // http://kb.mozillazine.org/Browser.cache.disk_cache_ssl
-user_pref("browser.cache.disk_cache_ssl",		false);
+//user_pref("browser.cache.disk_cache_ssl",		false);
 
 // CIS Version 1.2.0 October 21st, 2011 2.5.2 Disallow Credential Storage
 user_pref("signon.rememberSignons",		false);
@@ -399,7 +399,7 @@ user_pref("extensions.classicthemerestorer.combrelstop",		true);
 user_pref("extensions.classicthemerestorer.ctrreset",		false);
 user_pref("extensions.classicthemerestorer.extraurlkeycb",		true);
 user_pref("extensions.classicthemerestorer.fsaduration",		false);
-user_pref("extensions.classicthemerestorer.hightabpososx",		true);
+user_pref("extensions.classicthemerestorer.hightabpososx",		false);
 user_pref("extensions.classicthemerestorer.noconicons",		true);
 user_pref("extensions.classicthemerestorer.pananimation",		false);
 user_pref("extensions.classicthemerestorer.pref_actindx",		2);
@@ -434,11 +434,14 @@ user_pref("extensions.openwith.manual.sEIyCa3m",		"\"/usr/local/bin/zsh\" -c \"m
 user_pref("extensions.openwith.manual.sEIyCa3m.name",		"mpv");
 user_pref("extensions.openwith.order",		"[\"a/google_chrome\",\"a/safari\",\"a/seamonkey\",\"m/sEIyCa3m\"]");
 
+// https://github.com/The-OP/Fox/issues/8
+user_pref("dom.max_chrome_script_run_time", 600);
+user_pref("dom.max_script_run_time", 30);
+
 // Использовать HTTP/1.1 для передачи нескольких файлов, не реконнектясь после каждого.
 user_pref("network.http.pipelining",		true);
 user_pref("network.http.proxy.pipelining",		true);
 user_pref("network.http.pipelining.ssl",		true);
-
 
 // Более информативная страница показа ошибок в сертификатах сайтов.
 user_pref("browser.xul.error_pages.expert_bad_cert",		true);

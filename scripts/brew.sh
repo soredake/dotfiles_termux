@@ -57,42 +57,44 @@ brew install homebrew/dupes/openssh --with-libressl
 brew install homebrew/dupes/rsync
 
 # Install other useful binaries.
-brew install --HEAD tox/tox/qtox
+#brew install --HEAD tox/tox/qtox
+#brew install cmusfm
+#brew install httpie
+#brew install ranger --build-from-source
+#brew install ruby
+#brew install screenbrightness
+#brew install screenfetch
 brew install avidemux
-brew install cataclysm
-brew install chocolate-doom
 brew install cmus
-brew install curl --with-libressl --with-c-ares --with-libidn --with-nghttp2 --with-rtmpdump --with-libmetalink --with-gssapi --with-libssh2
+brew install curl --with-libressl --with-c-ares --with-libidn --with-nghttp2 --with-rtmpdump --with-libmetalink --with-gssapi --with-libssh2 && brew link --force curl
 brew install dnscrypt-proxy --with-plugins
-brew install dosbox
-brew install dwarf-fortress
 brew install ffmpeg --with-openssl --without-qtkit --with-libssh
-brew install freeciv
 brew install git-extras
 brew install gnupg
 brew install htop-osx
-brew install httpie
-brew install mpv-player/mpv/mpv --with-x11
+brew install mpv-player/mpv/mpv
 brew install node --with-openssl
 brew install openssl && brew link --force openssl
-brew install openttd
 brew install p7zip
 brew install pgcli
 brew install php56 --with-homebrew-curl
-brew install ppsspp
 brew install python3
-brew install ranger --build-from-source
 brew install reattach-to-user-namespace --with-wrap-pbcopy-and-pbpaste --with-wrap-launchctl
-brew install rogue
-brew install ruby
-brew install screenbrightness
-brew install screenfetch
 brew install shellcheck
 brew install thefuck
 brew install twister --HEAD
-brew install unrar
 brew install winetricks --ignore-dependencies
 brew install youtube-dl
+
+# Games
+brew install dwarf-fortress
+brew install ppsspp
+brew install rogue
+brew install openttd
+brew install freeciv
+brew install dosbox
+brew install cataclysm
+brew install chocolate-doom
 
 # Ranger deps
 brew install highlight
@@ -120,10 +122,6 @@ brew install tree
 
 # Link a some formulas
 brew linkapps mpv avidemux ppsspp openttd
-
-# Link formulas
-brew link --force curl
-brew link --force gettext
 
 # Remove outdated versions from the cellar.
 brew cleanup
