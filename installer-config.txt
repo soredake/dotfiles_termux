@@ -1,3 +1,0 @@
-packages=sudo,vim,aptitude,htop,nano,raspi-config,rpi-update,tor,xz-utils,git,zsh,tmux,wget,apt-utils,raspi-copies-and-fills,rng-tools,curl,bzip2,make,g++,build-essential,vsftpd,apt-transport-https
-rootfstype=xfs
-release=jessie

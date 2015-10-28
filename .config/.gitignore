@@ -1,0 +1,15 @@
+#mpv
+mpv/watch_later
+
+#cmus
+cmus/queue.pl
+cmus/cache
+cmus/lib.pl
+cmus/resume
+cmus/search-history
+cmus/command-history
+
+#ranger
+ranger/bookmarks
+ranger/history
+ranger/tagged

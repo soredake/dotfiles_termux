@@ -7,6 +7,10 @@ The following custom aliases/commands are available:
 * __....__: cd ../../..
 * __.....__: cd ../../../..
 * __chatrec__: record chaturbate rooms
+* __afk__: Lock the screen
+* __cask__: brew cask
+* __chatrec__: record chaturbate rooms
+* __chromekill__: Kill all the tabs in Chrome to free up memory
 * __emptytrash__: Empty the Trash on all mounted volumes and the main HDD as well as system logs
 * __fuck__: Auto-correct last input
 * __hosts__: Open hosts file in $EDITOR

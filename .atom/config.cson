@@ -1,0 +1,78 @@
+"*":
+  welcome:
+    showOnStartup: false
+  core:
+    followSymlinks: true
+    projectHome: "~/Documents/github"
+    ignoredNames: [
+      ".git"
+      ".DS_STORE"
+      ".idea"
+    ]
+    disabledPackages: [
+      "metrics"
+      "quick-jump"
+      "javascript-snippets"
+      "es6-javascript"
+      "enhanced-tabs"
+      "linter-shellcheck"
+    ]
+  "atom-ctags":
+    autoBuildTagsWhenActive: true
+  linter:
+    lintOnEditorFocus: false
+    showInfoMessages: true
+    statusBar: "Show error of the selected line"
+    lintOnChange: false
+    clearOnChange: true
+    showErrorPanel: false
+  editor:
+    invisibles: {}
+    preferredLineLength: 160
+    showIndentGuide: true
+    backUpBeforeSaving: true
+    showInvisibles: true
+    softWrap: true
+  "tool-bar":
+    position: "Left"
+    visible: false
+  "linter-eslint":
+    disableWhenNoEslintrcFileInPath: true
+  tabs:
+    enableVcsColoring: true
+    tabScrolling: true
+    usePreviewTabs: true
+  "tree-view":
+    hideIgnoredNames: true
+    hideVcsIgnoredFiles: true
+  "symbols-tree-view":
+    autoToggle: true
+  minimap:
+    plugins:
+      "git-diff": true
+  "exception-reporting":
+    userId: "59773b2b-4717-e629-2f2c-8c3a29e60b68"
+  jumpy: {}
+  "fuzzy-finder": {}
+  "git-diff": {}
+  "one-dark-ui": {}
+  "unity-dark-ui": {}
+  "smart-tab-name": {}
+  "git-projects":
+    rootPath: "/Users/susekaboss/Documents/github/"
+  "remote-atom":
+    keep_alive: true
+".plist.text.xml":
+  editor:
+    preferredLineLength: 120
+".plist.source":
+  editor:
+    preferredLineLength: 120
+minimap:
+  plugins:
+    "git-diff": false
+"autocomplete-plus":
+  enableAutoActivation: false
+editor:
+  showIndentGuide: true
+  softWrap: true

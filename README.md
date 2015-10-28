@@ -26,7 +26,9 @@ The following scripts are available in the "scripts" folder:
 * `home.sh` __Wrapper around the all of the other scripts; use this to set up a new Mac__
 * `node.sh` Install global io.js packages
 * `linux.sh` Sets up sensible defaults for OS X settings and a couple other cool tweaks
+* `osx.sh` Sets up sensible defaults for OS X settings and a couple other cool tweaks
 * `python.sh` Install global Python packages via Pip
+* `ruby.sh` Install global ruby gems
 
 ## Help
 
