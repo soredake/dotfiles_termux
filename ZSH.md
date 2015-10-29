@@ -2,12 +2,7 @@
 
 The following custom aliases/commands are available:
 
-* __..__: cd ..
-* __...__: cd ../..
-* __....__: cd ../../..
-* __.....__: cd ../../../..
 * __afk__: Lock the screen
-* __cask__: brew cask
 * __chatrec__: record chaturbate rooms
 * __chromekill__: Kill all the tabs in Chrome to free up memory
 * __emptytrash__: Empty the Trash on all mounted volumes and the main HDD as well as system logs
@@ -15,8 +10,6 @@ The following custom aliases/commands are available:
 * __hosts__: Open hosts file in $EDITOR
 * __g__: git
 * __h__: history
-* __hide__: Hide hidden files in Finder
-* __hidedesktop__: Hide all Desktop icons
 * __ip__: What's my IP address
 * __la__: List all files in long format with permissions in octal
 * __lsd__: List only directories
@@ -24,8 +17,6 @@ The following custom aliases/commands are available:
 * __pipupdate__: Update all Python packages globally installed via Pip
 * __please__/__plz__: sudo
 * __sha1sum__: Generate SHA1 checksum
-* __show__: Show hidden files in Finder
-* __showdesktop__: Show all Desktop icons
 * __timer__: Start a simple stopwatch
 * __update__: Get OS X Software Updates, update installed Ruby gems, Homebrew, npm, and their installed packages
 * __whois__: Enhanced WHOIS lookup

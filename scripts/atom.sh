@@ -7,6 +7,7 @@
 #apm install ssh-config
 apm install advanced-open-file
 apm install color-picker
+apm install permanent-delete
 apm install devdocs
 apm install editorconfig
 apm install enhanced-tabs
