@@ -1,8 +1,8 @@
-# Home (aka: susekaboss's dotfiles)
+# Home (aka: user's dotfiles)
 
 > These are my dotfiles. There are many like them, but these ones are mine.
 
-![Screenshot of susekaboss’s shell prompt](http://i.imgur.com/MTLif8c.jpg)
+![Screenshot of susekaboss’s shell prompt](http://example.com/ADDIT.jpg)
 
 ## Usage
 
@@ -28,7 +28,7 @@ The following scripts are available in the "scripts" folder:
 * `node.sh` Install global io.js packages
 * `osx.sh` Sets up sensible defaults for OS X settings and a couple other cool tweaks
 * `python.sh` Install global Python packages via Pip
-* `ruby.sh` Install global ruby gems
+* `ruby.sh` Install global ruby gems
 
 ## Help
 

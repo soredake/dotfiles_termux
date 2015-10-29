@@ -1,4 +1,4 @@
-alias ls='ls --color=auto'
+alias ls='ls --color=auto -a'
 
 # Enable simple aliases to be sudo'ed. ("sudone"?)
 # http://www.gnu.org/software/bash/manual/bashref.html#Aliases says: "If the

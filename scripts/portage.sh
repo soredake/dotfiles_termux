@@ -28,6 +28,7 @@ sudo layman -a emc
 sudo layman -a fkmclane
 sudo layman -a jorgicio
 sudo layman -a mpd
+sudo layman -a soft
 sudo layman -a octopus
 sudo layman -a open-overlay
 sudo layman -a petkovich
@@ -60,6 +61,9 @@ sudo emerge -av =www-client/tor-browser-5.0.2 #TODO: update ebuild to new versio
 sudo emerge =app-emulation/wine-staging-9999
 sudo emerge =media-sound/mpdscribble-9999
 sudo emerge =kde-apps/kdenlive-15.08.2
+sudo emerge media-font/profont
+sudo emerge app-editors/neovim
+sudo emerge x11-wm/awesome
 sudo emerge app-admin/sudo
 sudo emerge app-arch/p7zip
 sudo emerge app-crypt/gnupg

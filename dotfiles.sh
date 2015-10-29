@@ -29,9 +29,12 @@ function doIt() {
     fi
   done;
 
-  rsync --exclude ".atom/" --exclude ".init/.private" --exclude ".config" --exclude ".mozilla" --exclude ".tmuxinator/" \
-  -rv --progress --stats $HOMEDIR $HOME;
-
+  cd home/bausch
+  rsync --exclude ".atom/" --exclude ".init/" --exclude ".drush/" \
+  --exclude ".git/" --exclude ".WebIde90/" --exclude ".config/" \
+  --exclude ".mozilla/" --exclude ".tmuxinator/" --exclude "GIT.md" \
+  --exclude "LICENSE" --exclude "README.md" \
+  -avh --no-perms . ~;
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then

@@ -1,7 +1,7 @@
 
 # Chaturbate records
 function chatrec(){
-  livestreamer -p "mpv --stream-capture=$1_$(date +%x-%T).mp4 --title=$1 --cache 8192" chaturbate.com/$1 best
+  torify livestreamer -p "torify mpv --stream-capture=$1_$(date +%x-%T).mp4 --title=$1 --cache 8192" chaturbate.com/$1 best
 }
 
 # Create a new directory and enter it.
