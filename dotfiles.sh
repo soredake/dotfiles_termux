@@ -1,45 +1,40 @@
 #!/usr/bin/env bash
 
+HOMEDIR="home/bausch"
 SOURCE_DIR="$(cd "$(dirname "$0")" > /dev/null; pwd)";
 cd $SOURCE_DIR
 
 git pull origin master;
 
 function doIt() {
-  # Copy the ".bash/private" file only if it doesn't already exist.
+  # Copy the ".init/private" file only if it doesn't already exist.
   if [ ! -f ~/.init/.private ]; then
-    cp .init/.private ~/.init/.private
+    cp $HOMEDIR/.init/.private ~/.init/.private
   fi
 
-  # Symlink some config directories.
-  symlinked_dirs=(
-    .atom
+  # Symlink some home config directories.
+  symlinked_dirs_home=(
     .config/mpv
-    .config/cmus
     .config/ranger
+    .config/htop
     .tmuxinator
+    .mozilla
   );
-  for symlinked_dir in "${symlinked_dirs[@]}"; do
-    if ! [[ -L "$HOME/$symlinked_dir" && -d "$HOME/$symlinked_dir" ]]; then
-      ln -s "$SOURCE_DIR/$symlinked_dir" "$HOME/$symlinked_dir"
-      echo "Create symlink from $symlinked_dir to $HOME/$symlinked_dir"
+  for symlinked_dir_home in "${symlinked_dirs_home[@]}"; do
+    if ! [[ -L "$HOME/$symlinked_dir_home" && -d "$HOME/$symlinked_dir_home" ]]; then
+      ln -s "$SOURCE_DIR/$HOMEDIR/$symlinked_dir_home" "$HOME/$symlinked_dir_home"
+      echo "Create symlink from $HOMEDIR/$symlinked_dir_home to $HOME/$symlinked_dir_home"
     else
-      echo "Link for $symlinked_dir already exists"
+      echo "Link for $HOMEDIR/$symlinked_dir_home already exists"
     fi
   done;
 
-  rsync --exclude ".atom/" --exclude ".private"  --exclude ".config/mpv" --exclude ".config/ranger/" \
-  --exclude ".git/" --exclude "scripts/" --exclude ".config/cmus/" --exclude "long/" --exclude ".tmuxinator/" \
-  --exclude "ZSH.md" --exclude "dotfiles.sh" --exclude "GIT.md" \
+  cd home/bausch
+  rsync --exclude ".atom/" --exclude ".init/" --exclude ".drush/" \
+  --exclude ".git/" --exclude ".WebIde90/" --exclude ".config/" \
+  --exclude ".mozilla/" --exclude ".tmuxinator/" --exclude "GIT.md" \
   --exclude "LICENSE" --exclude "README.md" \
   -avh --no-perms . ~;
-
-  ln -s "$SOURCE_DIR/long/firefox/user.js" "$HOME/Library/Application Support/Firefox/Profiles/v036qpmg/user.js"
-  rsync -avh --no-perms long/thunderbird/profiles.ini $HOME/Library/Thunderbird/profiles.ini
-  rsync -avh --no-perms long/preferences/ $HOME/Library/Preferences/
-
-
-
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then

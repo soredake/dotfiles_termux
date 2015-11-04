@@ -13,9 +13,9 @@
   # http://blog.cuviper.com/2013/11/10/how-short-can-git-abbreviate/
   abbrev = 12
 
-  # Make `git rebase` safer on OS X.
+  # Make `git rebase` safer on OS X. Было false
   # More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
-  trustctime = false
+  trustctime = true
 
   # Prevent showing files whose names contain non-ASCII symbols as unversioned.
   # http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
@@ -179,8 +179,8 @@
 	# Undo push.
   udp = push -f origin HEAD^:master
 [credential]
-  helper = osxkeychain
+  helper = store
 [http]
-  proxy = socks5://localhost:9050
+  proxy = socks5://localhost:9250
 [https]
-  proxy = socks5://localhost:9050
+  proxy = socks5://localhost:9250

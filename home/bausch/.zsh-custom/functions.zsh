@@ -1,19 +1,7 @@
 
 # Chaturbate records
 function chatrec(){
-  livestreamer -p "mpv --stream-capture=$1_$RANDOM.mp4 --title=$1 --cache 8192" chaturbate.com/$1 best
-}
-
-# Kext install
-function kextin(){
-  SOURCE_DIR="$(cd "$(dirname "$0")" > /dev/null; pwd)";
-  cd $SOURCE_DIR
-  echo 'Installing Kext...'
-  sudo cp -R "$BASEDIR/$1.kext" /Library/Extensions
-  sudo chmod -R 755 /Library/Extensions/$1.kext
-  sudo chown -R root:wheel /Library/Extensions/$1.kext
-  sudo kextload /Library/Extensions/$1.kext
-  echo 'Installation complete. If Kext not working proportley you may need a reboot.'
+  torify livestreamer -p "torify mpv --stream-capture=$1_$(date +%x-%T).mp4 --title=$1 --cache 8192" chaturbate.com/$1 best
 }
 
 # Create a new directory and enter it.
@@ -27,11 +15,6 @@ function mkd() {
 # small enough for one screen.
 function tre() {
   tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
-}
-
-# Copy public key,
-function pk() {
-  pbcopy < ~/.ssh/id_rsa.pub
 }
 
 # Convert currencies; cconv {amount} {from} {to}
