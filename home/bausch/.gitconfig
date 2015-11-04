@@ -180,7 +180,4 @@
   udp = push -f origin HEAD^:master
 [credential]
   helper = store
-[http]
-  proxy = socks5://localhost:9250
-[https]
-  proxy = socks5://localhost:9250
+
