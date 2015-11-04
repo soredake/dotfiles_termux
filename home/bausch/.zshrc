@@ -8,7 +8,7 @@ unset use_color safe_term match_lhs sh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="lambda-mod"
+ZSH_THEME="imajes"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
