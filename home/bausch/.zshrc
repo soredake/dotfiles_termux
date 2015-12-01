@@ -10,6 +10,8 @@ unset use_color safe_term match_lhs sh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="imajes"
 
+TERM="rxvt-256color"
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
