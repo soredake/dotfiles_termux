@@ -22,7 +22,7 @@
   precomposeunicode = false
 
   # Use Atom as the default editor.
-  editor = atom --wait
+  editor = nano
 
   # Don't mess with line endings when checking out files, but fix files with
   # CRLF endings introduced accidentally.
@@ -95,6 +95,8 @@
 
 	# Clone a repository including all submodules.
   c = clone --recursive
+
+ candp = !git add -A && git commit -av && git -c http.sslVerify=false push
 
 	# Commit all changes.
 	ca = !git add -A && git commit -av
@@ -181,3 +183,6 @@
 [credential]
   helper = store
 
+[user]
+	name = name
+	email = email@example
