@@ -23,9 +23,7 @@ alias h="history"
 # Stopwatch
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
 
-# Update Portage tree, update Layman overlays, update installed packages, update installed Ruby gems, npm, and their
-# installed packages.
-alias update='sudo eix-sync; sudo eix-update; sudo env-update; sudo etc-update; sudo emerge -av --depclean; sudo emerge -uDU @world; sudo emerge --regen; sudo emerge @preserved-rebuild; sudo emerge @module-rebuild; sudo npm update -g; gem update --system; gem update;'
+alias update='sudo emerge --sync && sudo layman -S && sudo eix-update && sudo emerge -uDU @world && sudo emerge @preserved-rebuild && sudo emerge @module-rebuild && sudo emerge -av --depclean && sudo npm update -g && sudo env-update && sudo etc-update && sudo eclean -d distfiles && hostsupdate && upgrade_oh_my_zsh'
 
 # What's my IP address.
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -36,5 +34,5 @@ alias whois="whois -h whois.internic.net"
 # Currency conversions.
 alias usd="cconv 1 usd uah"
 
-# Update all Python packages installed via Pip.
-#alias pip2update="pip2 freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip2 install -U"
+alias gitpushall='find . -maxdepth 1 -type d -print -execdir git --git-dir={}/.git --work-tree=$PWD/{} candp \;'
+alias gitpullall='find . -maxdepth 1 -type d -print -execdir git --git-dir={}/.git --work-tree=$PWD/{} pull origin master \;'
