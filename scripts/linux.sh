@@ -12,14 +12,7 @@ emerge app-misc/tmux
 emerge app-shell/zsh
 useradd pi
 gpasswd -a pi wheel audio video
-chsh -s /bin/zsh
+chsh -s /bin/zsh pi
 locale-gen
-sudo rc-update add ntp-client default
-sudo rc-update add consolefont boot
-sudo rc-update add tor default
-sudo rc-update add mpd default
-sudo rc-update add avahi-daemon default
-sudo rc-update add mpdscribble default
 
-#xset m 2/1 4
-xset m 1/10 1
+git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
