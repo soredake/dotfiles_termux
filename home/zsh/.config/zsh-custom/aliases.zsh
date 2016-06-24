@@ -36,3 +36,4 @@ alias usd="cconv 1 usd uah"
 
 alias gitpushall='find . -maxdepth 1 -type d -print -execdir git --git-dir={}/.git --work-tree=$PWD/{} candp \;'
 alias gitpullall='find . -maxdepth 1 -type d -print -execdir git --git-dir={}/.git --work-tree=$PWD/{} pull origin master \;'
+alias gitn='git -c http.sslVerify=false $@'
