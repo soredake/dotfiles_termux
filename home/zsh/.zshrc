@@ -54,7 +54,7 @@ ZSH_CUSTOM=$HOME/.config/zsh-custom
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(themes mosh rsync cp colored-man copydir copyfile extract git common-aliases tmuxinator tmux npm zsh_reload)
+plugins=(themes colored-man copydir copyfile extract git common-aliases tmuxinator tmux zsh_reload)
 #gpg-agent ssh-agent nyan nvm
 # vi-mode cause problems
 
@@ -80,9 +80,9 @@ source $HOME/.init/.private
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
+  export EDITOR='emacs -nw'
 else
-  export EDITOR='vim'
+  export EDITOR='emacs'
 fi
 
 # Don't hash directories on the path a time, which allows new

@@ -31,5 +31,9 @@ alias usd="cconv 1 usd uah"
 
 alias gitpushall='find . -maxdepth 1 -type d -print -execdir git --git-dir={}/.git --work-tree=$PWD/{} candp \;'
 alias gitpullall='find . -maxdepth 1 -type d -print -execdir git --git-dir={}/.git --work-tree=$PWD/{} pull origin master \;'
+<<<<<<< HEAD
 
 alias hostsupdate='cd $HOME/git/hosts && peth=$(realpath .)  && git reset --hard && git pull && chmod +x updateHostsFile.py && python3 updateHostsFile.py --extensions gambling -a && /system/bin/su -c "mount -o remount,rw /system" && /system/bin/su -c "mv $peth/hosts /etc/hosts" && /system/bin/su -c "mount -o remount,ro /system"'
+=======
+alias gitn='git -c http.sslVerify=false $@'
+>>>>>>> c97d935ecf67d1d1ded6e6db8dd5b76af84a36e6
