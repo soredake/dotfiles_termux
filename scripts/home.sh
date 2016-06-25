@@ -28,5 +28,4 @@ source linux.sh
 source ruby.sh
 
 # Create dirs
-mkdir ~/.rtorrent-session
-mkdir ~/Documents/git
+mkdir ~/git

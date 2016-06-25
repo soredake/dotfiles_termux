@@ -1,9 +1,3 @@
-
-# Chaturbate records
-function chatrec(){
-  torify livestreamer -p "torify mpv --stream-capture=$1_$(date +%x-%T).mp4 --title=$1 --cache 8192" chaturbate.com/$1 best
-}
-
 # Create a new directory and enter it.
 function mkd() {
   mkdir -p "$@" && cd "$_";
@@ -20,4 +14,8 @@ function tre() {
 # Convert currencies; cconv {amount} {from} {to}
 function cconv() {
   curl -s "http://www.google.com/finance/converter?a=$1&from=$2&to=$3&hl=es" |  sed '/res/!d;s/<[^>]*>//g';
+}
+
+upgrade_oh_my_zsh_termux (){
+env ZSH=$ZSH /data/data/com.termux/files/usr/bin/sh $ZSH/tools/upgrade.sh
 }
