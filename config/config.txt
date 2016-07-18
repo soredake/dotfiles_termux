@@ -1,5 +1,0 @@
-arm_freq=1000
-core_freq=500
-sdram_freq=500
-over_voltage=6
-gpu_mem=16
