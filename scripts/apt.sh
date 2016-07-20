@@ -27,14 +27,13 @@ packages=(
     emacs
     play-audio
     remind
+    unrar
     openssh
     bzip2 # extract zsh-plugin dependecety
-    sudo emerge net-misc/whois
-    sudo emerge net-misc/youtube-dl
-    sudo emerge sys-fs/e2fsprogs
-    sudo emerge sys-fs/fuse
-    sudo emerge =sys-kernel/raspberrypi-sources-4.4.9999
-    sudo emerge sys-fs/f2fs-tools # move to stage4
+    net-misc/whois
+    net-misc/youtube-dl
+    sys-fs/e2fsprogs
+    sys-fs/fuse
     docker # https://github.com/termux/termux-packages/issues/320
     veracrypt # https://github.com/termux/termux-packages/issues/313
     ncmpcpp # https://github.com/termux/termux-packages/issues/314
@@ -63,7 +62,8 @@ packages=(
     sys-fs/simple-mtpfs
     sys-fs/{f2fs-tools,dosfstools,e2fsprogs,fuse,ntfs3g,xfsprogs}
     trackma # not exist
-    net-misc/livestreamer
+    livestreamer
+    man
 
 );
 apt install ${packages[@]}
