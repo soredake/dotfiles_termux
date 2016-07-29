@@ -55,7 +55,7 @@ packages=(
     netcat # exist?
     nmap # exist?
     bind-tools # exist?
-    stow # not exist
+    stow
     mpdscribble # not exist
     sys-apps/{ethtool,lshw,pciutils,usbutils}
     sys-block/ms-sys
