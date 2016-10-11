@@ -7,25 +7,25 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Setup dotfiles.
-source dotfiles.sh
+../dotfiles.sh
 
 # Install portage packages.
-source portage.sh
+. portage.sh
 
 # Install zsh.
 chsh -s /bin/zsh
 
 # Install Mode modules.
-source node.sh
+. node.sh
 
 # Install Atom plugins.
-source node.sh
+. node.sh
 
 # Setup linux.
-source linux.sh
+. linux.sh
 
 # Install ruby gems.
-source ruby.sh
+. ruby.sh
 
 # Create dirs
 mkdir ~/git

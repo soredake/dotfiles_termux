@@ -1,3 +1,5 @@
+#!/system/bin/sh
+
 # needed because of https://github.com/pyllyukko/user.js/pull/136#issuecomment-206812337
 cd /data/data/org.mozilla.fennec_fdroid/files/mozilla
 # https://github.com/graysky2/profile-sync-daemon/blob/master/common/browsers/firefox

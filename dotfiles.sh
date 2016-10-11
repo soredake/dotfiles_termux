@@ -1,15 +1,14 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-HOMEDIR="home/bausch"
 SOURCE_DIR="$(cd "$(dirname "$0")" > /dev/null; pwd)";
 cd $SOURCE_DIR
 
 git pull origin master;
 
-function doIt() {
+doIt() {
   # Copy the ".init/private" file only if it doesn't already exist.
-  if [ ! -f ~/.init/.private ]; then
-    cp $HOMEDIR/.init/.private ~/.init/.private
+  if [ ! -f $HOME/.init/.private ]; then
+    cp $SOURCE_DIR/.init/.private $HOME/.init/.private
   fi
 
   # Symlink some home config directories.
