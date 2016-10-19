@@ -1,6 +1,5 @@
-#!/usr/bin/env bash
+#!/system/bin/sh
 
 # Install command-line tools globally using Python.
 
-pip3 install plyr livestreamer
-pip2 install pillow urwid trackma
+pip3 install plyr livestreamer pillow urwid trackma youtube-dl

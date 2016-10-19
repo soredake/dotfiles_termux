@@ -1,4 +1,6 @@
-cd $HOME/storage/Android/data/kvj.taskw/files/*
+#!/system/bin/sh
+
+cd "$HOME/storage/Android/data/kvj.taskw/files/*" || exit 1
 read -p "Choose username? " user;
 read -p "Choose group? " group;
 read -p "Choose userkey? " cred;
@@ -17,11 +19,6 @@ taskd.ca=ca.cert.pem
 taskd.server=$host:53589
 taskd.credentials=$group/$user/$cred
 END
-sftp server <<END
+sftp server << "END"
 get -af mdata/taskd/pki/{ca.cert.pem,$user.cert.pem,$user.key.pem}
 END
-#task config taskd.certificate ~/.task/$user.cert.pem
-#task config taskd.key ~/.task/$user.key.pem
-#task config taskd.ca ~/.task/ca.cert.pem
-#task config taskd.server $host:53589
-#task config taskd.credentials $group/$user/$cred
