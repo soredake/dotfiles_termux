@@ -4,7 +4,6 @@
 # added missing docker-needed kernel parameters
 # removed support for xbox controllers
 
-# @TODO: move to gentoo
 [ ! -d "$HOME/.cache/zf2_kernel" ] && mkdir "$HOME/.cache/zf2_kernel"
 docker run -it --rm \
        --name zenfone2-kernel-compile \
