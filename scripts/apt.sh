@@ -8,17 +8,15 @@ apt upgrade
 
 # Install other useful binaries.
 packages=(
-    bind-tools # exist?
     busybox
     coreutils
     docker # https://github.com/termux/termux-packages/issues/320
-    fuse # not exists?
     git
     htop
     man
     mc
-    silversearcher-ag
     ncmpcpp # https://github.com/termux/termux-packages/issues/314
+    neofetch
     nmap
     nodejs
     openssh
@@ -27,10 +25,9 @@ packages=(
     ranger
     remind
     rsync
-    sshfs # not exist?
+    silversearcher-ag
     stow
     tmux
-    trackma # not exists
     unrar
     unzip
     veracrypt # https://github.com/termux/termux-packages/issues/313

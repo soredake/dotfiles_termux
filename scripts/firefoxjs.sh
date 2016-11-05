@@ -1,13 +1,11 @@
 #!/system/bin/sh
 
-# needed because of https://github.com/pyllyukko/user.js/pull/136#issuecomment-206812337
 cd /data/data/org.mozilla.fennec_fdroid/files/mozilla || exit 1
-# https://github.com/graysky2/profile-sync-daemon/blob/master/common/browsers/firefox
-profile=$(grep '[P,p]'ath= profiles.ini | sed 's/[P,p]ath=//')
-cd "$profile" || exit 1
-curl -o user.js https://raw.githubusercontent.com/pyllyukko/user.js/master/user.js
+cd "$(sed -n -e 's/^.*Path=//p' profiles.ini)" || exit 1
+wget https://raw.githubusercontent.com/pyllyukko/user.js/master/user.js
 chmod 700 user.js
-chown -R u0_a217:u0_a217 user.js
-# https://stackoverflow.com/questions/5410757/delete-lines-in-a-text-file-that-containing-a-specific-string
-awk '!/layers.acceleration.disabled/' user.js > temp && mv temp user.js
-awk '!/layers.acceleration.disabled/' prefs.js > temp && mv temp prefs.js
+ouser=$(stat -c "%U" prefs.js)
+chown "$ouser":"$ouser" user.js
+
+# android version is need this https://github.com/pyllyukko/user.js/pull/136#issuecomment-206812337
+sed -i '/layers.acceleration.disabled/d' user.js

@@ -9,15 +9,8 @@
 # Setup linux.
 ./linux.sh
 
-# Install Mode modules.
+# Install Node plugins.
 ./node.sh
-
-# Install Atom plugins.
-./node.sh
-
-
-# Install ruby gems.
-./ruby.sh
 
 # Create dirs
 mkdir ~/git
