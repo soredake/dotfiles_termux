@@ -1,9 +1,9 @@
-#!/usr/bin/env bash
+#!/system/bin/sh
 
-SOURCE_DIR="$(cd "$(dirname "$0")" > /dev/null; pwd)";
-cd $SOURCE_DIR
+SD="$(cd "$(dirname "$0")" > /dev/null; pwd)";
+cd "$SD" || exit 1
 
-for d in `ls .`;
+for d in $(echo */);
 do
-    ( stow $1 -d $SOURCE_DIR -t $HOME $d )
+  stow $1 -v 2 -d "$SD" -t "$HOME" "$d"
 done

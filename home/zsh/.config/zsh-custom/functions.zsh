@@ -16,6 +16,6 @@ function cconv() {
   curl -s "http://www.google.com/finance/converter?a=$1&from=$2&to=$3&hl=es" |  sed '/res/!d;s/<[^>]*>//g';
 }
 
-upgrade_oh_my_zsh_termux (){
-env ZSH=$ZSH /data/data/com.termux/files/usr/bin/sh $ZSH/tools/upgrade.sh
-}
+#upgrade_oh_my_zsh_termux (){
+#env ZSH=$ZSH /data/data/com.termux/files/usr/bin/sh $ZSH/tools/upgrade.sh
+#}

@@ -1,6 +1,12 @@
+# Tmux plugin settings
+export ZSH_TMUX_AUTOSTART=false
+export ZSH_TMUX_AUTOCONNECT=false
+export ZSH_TMUX_AUTOQUIT=false
 
-export LESS="${less_options[*]}";
-unset less_options;
+# Ranger settings
+export RANGER_LOAD_DEFAULT_RC=false
+
+# default pager
 export PAGER='less';
 
 # Don’t clear the screen after quitting a manual page.

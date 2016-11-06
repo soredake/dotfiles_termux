@@ -8,14 +8,13 @@ apt upgrade
 
 # Install other useful binaries.
 packages=(
+    bc
     busybox
     coreutils
-    docker # https://github.com/termux/termux-packages/issues/320
     git
     htop
     man
     mc
-    ncmpcpp # https://github.com/termux/termux-packages/issues/314
     neofetch
     nmap
     nodejs
@@ -30,7 +29,6 @@ packages=(
     tmux
     unrar
     unzip
-    veracrypt # https://github.com/termux/termux-packages/issues/313
     w3m
     zsh
 );

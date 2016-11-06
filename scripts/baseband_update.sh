@@ -2,9 +2,9 @@
 
 mkdir tmp
 cd "$_" || exit 1
-curl -o radio_module_6_beta.rar https://a.pomf.cat/mdnrvi.rar
-unrar x radio_module_6_beta.rar
-rm radio_module_6_beta.rar
+curl -O https://a.pomf.cat/mdnrvi.rar
+unrar x mdnrvi.rar
+rm mdnrvi.rar
 peth=$(realpath .)
 /system/bin/su -c "mount -o remount,rw /system
 rm -f /system/vendor/firmware/telephony/{XMM_2230_REV20_*_V1.1_ASUS_SPI_FLASHLESS,XMM_7260_REV20_*_V4.0_ASUS7262_HSIC_FLASHLESS}.fls

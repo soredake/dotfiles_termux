@@ -11,6 +11,3 @@
 
 # Install Node plugins.
 ./node.sh
-
-# Create dirs
-mkdir ~/git
