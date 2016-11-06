@@ -8,7 +8,7 @@ alias cp='cp -i';
 alias mv='mv -i';
 
 # better ls
-alias ls='ls --color=auto -ah --quoting-style=escape'
+alias ls='ls --color=auto -ah'
 
 # Enable simple aliases to be sudo'ed. ("sudone"?)
 # http://www.gnu.org/software/bash/manual/bashref.html#Aliases says: "If the
@@ -26,6 +26,6 @@ alias myip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias whois='whois -h whois.internic.net'
 
 # tmux alias with xdg config location
-alias tmux='tmux -f $XDG_CONFIG_HOME/tmux/tmux.conf'
+alias tmux='tmux -f $HOME/.config/tmux/tmux.conf'
 
 alias hostsupdate='cd $HOME/git/hosts && peth=$(realpath .) && git reset --hard && git pull && python3 updateHostsFile.py --extensions gambling -a && /system/bin/su -c "mount -o remount,rw /system && mv $peth/hosts /etc/hosts && mount -o remount,ro /system"'

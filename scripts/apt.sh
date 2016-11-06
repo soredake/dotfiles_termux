@@ -31,5 +31,5 @@ packages=(
     unzip
     w3m
     zsh
-);
+)
 apt install -y "${packages[@]}"
