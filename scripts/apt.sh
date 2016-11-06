@@ -32,4 +32,4 @@ packages=(
     w3m
     zsh
 );
-apt install "${packages[@]}"
+apt install -y "${packages[@]}"
