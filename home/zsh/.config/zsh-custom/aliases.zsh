@@ -1,3 +1,4 @@
+# shellcheck disable=2034,2148
 # Confirm before overwriting
 # I know it is bad practice to override the default commands, but this is for
 # my own safety. If you really want the original "instakill" versions, you can
@@ -27,5 +28,3 @@ alias whois='whois -h whois.internic.net'
 
 # tmux alias with xdg config location
 alias tmux='tmux -f $HOME/.config/tmux/tmux.conf'
-
-alias hostsupdate='cd $HOME/git/hosts && peth=$(realpath .) && git reset --hard && git pull && python3 updateHostsFile.py --extensions gambling -a && /system/bin/su -c "mount -o remount,rw /system && mv $peth/hosts /etc/hosts && mount -o remount,ro /system"'

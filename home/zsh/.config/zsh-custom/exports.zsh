@@ -1,3 +1,4 @@
+# shellcheck disable=2034,2148
 # Tmux plugin settings
 export ZSH_TMUX_AUTOSTART=false
 export ZSH_TMUX_AUTOCONNECT=false
@@ -15,18 +16,14 @@ export MANPAGER="less -X";
 # Highlight section titles in manual pages.
 export LESS_TERMCAP_md="${yellow}";
 
-# Keep a reasonably long history.
-# export HISTSIZE=4096;
-# Keep a super long history.
+# Keep a short history.
 export HISTSIZE=500;
 
 # Keep even more history lines inside the file, so we can still look up
 # previous commands without needlessly cluttering the current shell's history.
-# export HISTFILESIZE=16384;
 export HISTFILESIZE=65536;
 
 # When executing the same command twice or more in a row, only store it once.
-# export HISTCONTROL=ignoredups;
 # Ignore commands that start with spaces and duplicates
 export HISTCONTROL=ignoreboth
 

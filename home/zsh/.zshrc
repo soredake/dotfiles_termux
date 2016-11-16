@@ -1,5 +1,6 @@
+# shellcheck disable=2034,2148
 # Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM="$HOME/.config/zsh-custom"
+export ZSH_CUSTOM="$HOME/.config/zsh-custom"
 
 # clone oh-my-zsh
 [ ! -d "$HOME/.oh-my-zsh" ] && git clone --depth 1 https://github.com/robbyrussell/oh-my-zsh "$HOME/.oh-my-zsh"
@@ -32,7 +33,6 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 plugins=(gitfast themes rsync colored-man-pages colorize torrent extract git common-aliases zsh_reload tmux wd)
 
-# User configuration
 # Add additional directories to the path.
 pathadd() {
   [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]] && PATH="${PATH:+"$PATH:"}$1"
@@ -58,8 +58,7 @@ setopt nohashdirs
 # No global match, no more "zsh: not found"
 unsetopt nomatch
 
-# Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards.
-#[ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2 | tr ' ' '\n')" scp sftp ssh;
-
 # load zsh-syntax-highlighting
 . "$HOME"/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+zmodload -a zsh/zpty zpty
