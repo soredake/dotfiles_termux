@@ -9,19 +9,20 @@ export ZSH_CUSTOM="$HOME/.config/zsh-custom"
 [ ! -d "$HOME/.zsh-syntax-highlighting" ] && git clone --depth 1 https://github.com/zsh-users/zsh-syntax-highlighting "$HOME/.zsh-syntax-highlighting"
 
 # clone pure theme
-[ ! -d "$HOME/.pure" ] && git clone --depth 1 https://github.com/sindresorhus/pure "$HOME/.pure"
-[ ! -d "$HOME/.zfunctions" ] && mkdir "$HOME/.zfunctions"
-[ ! -h "$HOME/.zfunctions/async" ] && ln -s "$HOME/.pure/async.zsh" "$HOME/.zfunctions/async"
-[ ! -h "$ZSH_CUSTOM/pure.zsh-theme" ] && ln -s "$HOME/.pure/pure.zsh" "$ZSH_CUSTOM/pure.zsh-theme"
+#[ ! -d "$HOME/.pure" ] && git clone --depth 1 https://github.com/sindresorhus/pure "$HOME/.pure"
+#[ ! -d "$HOME/.zfunctions" ] && mkdir "$HOME/.zfunctions"
+#[ ! -h "$HOME/.zfunctions/async" ] && ln -s "$HOME/.pure/async.zsh" "$HOME/.zfunctions/async"
+#[ ! -h "$ZSH_CUSTOM/pure.zsh-theme" ] && ln -s "$HOME/.pure/pure.zsh" "$ZSH_CUSTOM/pure.zsh-theme"
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
 # Functions
-fpath=( "$HOME/.zfunctions" $fpath )
+fpath+=( "$HOME/.zfunctions" )
 
 # Theme
-ZSH_THEME="pure"
+#ZSH_THEME="pure"
+ZSH_THEME="imajes"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 DISABLE_AUTO_UPDATE="true"
@@ -38,8 +39,6 @@ pathadd() {
   [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]] && PATH="${PATH:+"$PATH:"}$1"
 }
 pathadd "$HOME/bin"
-pathadd /sbin
-pathadd /usr/sbin
 
 . "$ZSH/oh-my-zsh.sh"
 for f in $HOME/.init/*; do . $f; done
@@ -61,4 +60,4 @@ unsetopt nomatch
 # load zsh-syntax-highlighting
 . "$HOME"/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-zmodload -a zsh/zpty zpty
+#zmodload -a zsh/zpty zpty

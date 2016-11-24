@@ -1,6 +1,6 @@
 #!/system/bin/sh
 
-SD="$(cd "$(dirname "$0")" > /dev/null; pwd)";
+SD="$(cd "$(dirname "$0")" > /dev/null || exit 1; pwd)";
 cd "$SD" || exit 1
 
 for d in $(echo */);
