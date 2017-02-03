@@ -11,6 +11,7 @@ packages=(
     bc
     busybox
     coreutils
+    curl
     git
     htop
     man

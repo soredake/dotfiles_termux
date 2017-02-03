@@ -32,23 +32,23 @@ DISABLE_AUTO_UPDATE="true"
 # much, much faster.
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-plugins=(gitfast themes rsync colored-man-pages colorize torrent extract git common-aliases zsh_reload tmux wd)
+plugins=(gitfast themes yarn rsync colored-man-pages extract git common-aliases zsh_reload tmux wd)
 
 # Add additional directories to the path.
 pathadd() {
   [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]] && PATH="${PATH:+"$PATH:"}$1"
 }
 pathadd "$HOME/bin"
+pathadd "$HOME/ybin/bin"
 
 . "$ZSH/oh-my-zsh.sh"
-for f in $HOME/.init/*; do . $f; done
 
-# Preferred editor for local and remote sessions
-if [ -n "$SSH_CONNECTION" ]; then
-  export EDITOR='vi'
-else
-  export EDITOR="$EDITOR"
-fi
+# enable completion for hidden f{iles,olders}
+# https://unix.stackexchange.com/questions/308315/how-can-i-configure-zsh-completion-to-show-hidden-files-and-folders
+#compinit
+_comp_options+=(globdots)
+
+for f in $HOME/.init/*; do . $f; done
 
 # Don't hash directories on the path a time, which allows new
 # binaries in $PATH to be executed without rehashing.
