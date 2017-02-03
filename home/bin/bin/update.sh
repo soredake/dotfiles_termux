@@ -1,5 +1,5 @@
 #!/system/bin/sh
-
+# @TODO: upgrade
 npm update -g
 yarn global upgrade
 upgrade_oh_my_zsh

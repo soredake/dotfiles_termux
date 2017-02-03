@@ -10,6 +10,8 @@ apt upgrade
 packages=(
     bc
     busybox
+    # neeeded to build pycryptodome
+    clang
     coreutils
     curl
     git
