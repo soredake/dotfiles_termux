@@ -1,54 +1,66 @@
 # shellcheck disable=2034,2148
-# Would you like to use another custom folder than $ZSH/custom?
-export ZSH_CUSTOM="$HOME/.config/zsh-custom"
+[[ ! -d "$XDG_DATA_HOME/zplug" ]] && git clone --depth 1 https://github.com/zplug/zplug "$XDG_DATA_HOME/zplug"
+export ZPLUG_HOME="$XDG_DATA_HOME/zplug"
+export ZPLUG_LOADFILE="$XDG_CONFIG_HOME/zsh/packages.zsh"
+export ZPLUG_CACHE_DIR="$XDG_CACHE_HOME/zplug"
+. "$XDG_DATA_HOME/zplug/init.zsh"
+zplug "zdharma/fast-syntax-highlighting"
+zplug "zsh-users/zsh-autosuggestions"
+zplug 'sindresorhus/pure', as:theme, use:"*.zsh"
+zplug "lib/completion", from:oh-my-zsh
+zplug "lib/history", from:oh-my-zsh
+zplug "lib/key-bindings", from:oh-my-zsh
+zplug "lib/theme-and-appearance", from:oh-my-zsh 
+# https://github.com/Orochimarufan/.files/blob/1ade15c9069c2846b134860e56fbe9b97b1ed0bb/zsh/zshrc#L28
+# Install plugins if there are plugins that have not been installed
+if ! zplug check --verbose; then
+  printf "Install? [y/N]: "
+  if read -q; then
+      echo; zplug install
+  fi
+fi
 
-# clone oh-my-zsh
-[ ! -d "$HOME/.oh-my-zsh" ] && git clone --depth 1 https://github.com/robbyrussell/oh-my-zsh "$HOME/.oh-my-zsh"
+# Then, source plugins and add commands to $PATH
+zplug load
 
-# clone zsh-syntax-highlight
-[ ! -d "$HOME/.zsh-syntax-highlighting" ] && git clone --depth 1 https://github.com/zsh-users/zsh-syntax-highlighting "$HOME/.zsh-syntax-highlighting"
+# Changing/making/removing directory
+setopt auto_pushd
+setopt pushd_ignore_dups
+setopt pushdminus
 
-# clone pure theme
-#[ ! -d "$HOME/.pure" ] && git clone --depth 1 https://github.com/sindresorhus/pure "$HOME/.pure"
-#[ ! -d "$HOME/.zfunctions" ] && mkdir "$HOME/.zfunctions"
-#[ ! -h "$HOME/.zfunctions/async" ] && ln -s "$HOME/.pure/async.zsh" "$HOME/.zfunctions/async"
-#[ ! -h "$ZSH_CUSTOM/pure.zsh-theme" ] && ln -s "$HOME/.pure/pure.zsh" "$ZSH_CUSTOM/pure.zsh-theme"
+alias -g ...='../..'
+alias -g ....='../../..'
+alias -g .....='../../../..'
+alias -g ......='../../../../..'
 
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+alias 1='cd -'
+alias 2='cd -2'
+alias 3='cd -3'
+alias 4='cd -4'
+alias 5='cd -5'
+alias 6='cd -6'
+alias 7='cd -7'
+alias 8='cd -8'
+alias 9='cd -9'
+alias d='dirs -v | head -10'
 
-# Functions
-fpath+=( "$HOME/.zfunctions" )
+# List directory contents
+alias lsa='ls -lah'
+alias l='ls -lah'
+alias ll='ls -lh'
+alias la='ls -lAh'
 
-# Theme
-#ZSH_THEME="pure"
-ZSH_THEME="imajes"
-
-# Uncomment the following line to disable bi-weekly auto-update checks.
-DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-plugins=(gitfast themes yarn rsync colored-man-pages extract git common-aliases zsh_reload tmux wd)
+for f in "$XDG_CONFIG_HOME/zsh/custom"/*; do . $f; done
 
 # Add additional directories to the path.
 pathadd() {
-  [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]] && PATH="${PATH:+"$PATH:"}$1"
+  [[ -d "$1" ]] && [[ ":$PATH:" != *":$1:"* ]] && PATH="${PATH:+"$PATH:"}$1"
 }
 pathadd "$HOME/bin"
-pathadd "$HOME/ybin/bin"
-
-. "$ZSH/oh-my-zsh.sh"
 
 # enable completion for hidden f{iles,olders}
 # https://unix.stackexchange.com/questions/308315/how-can-i-configure-zsh-completion-to-show-hidden-files-and-folders
-#compinit
 _comp_options+=(globdots)
-
-for f in $HOME/.init/*; do . $f; done
 
 # Don't hash directories on the path a time, which allows new
 # binaries in $PATH to be executed without rehashing.
@@ -57,7 +69,20 @@ setopt nohashdirs
 # No global match, no more "zsh: not found"
 unsetopt nomatch
 
-# load zsh-syntax-highlighting
-. "$HOME"/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Not autocomplete /etc/hosts, https://unix.stackexchange.com/questions/14155/ignore-hosts-file-in-zsh-ssh-scp-tab-complete
+zstyle ':completion:*:hosts' hosts off
 
-#zmodload -a zsh/zpty zpty
+# https://stackoverflow.com/questions/14307086/tab-completion-for-aliased-sub-commands-in-zsh-alias-gco-git-checkout/20643204#20643204
+setopt COMPLETE_ALIASES
+
+# Less and xsel cannot create the needed folders
+[[ ! -d "$XDG_CACHE_HOME/less" ]] && mkdir "$XDG_CACHE_HOME/less"
+
+# Quote stuff that looks like URLs automatically.
+# https://github.com/robbyrussell/oh-my-zsh/blob/3ed37f47cb1a9385e2238528839d7d91634f2c5b/lib/misc.zsh#L7-L9<Paste>
+autoload -Uz bracketed-paste-magic
+autoload -U url-quote-magic
+zstyle ':urlglobber' url-other-schema ftp git gopher http https magnet
+zstyle ':url-quote-magic:*' url-metas "*&?[]^'(|)~#="
+zle -N self-insert url-quote-magic
+zle -N bracketed-paste bracketed-paste-magic

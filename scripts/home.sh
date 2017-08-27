@@ -1,13 +1,10 @@
 #!/system/bin/sh
 
-# Setup dotfiles.
-../dotfiles.sh
-
 # Install portage packages.
 ./apt.sh
 
 # Setup linux.
-./linux.sh
+#./linux.sh
 
-# Install Node plugins.
-./node.sh
+# Stow home
+../home/install.sh

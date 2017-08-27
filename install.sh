@@ -1,8 +1,7 @@
-#!/system/bin/sh
+#!/system/bin/env bash
 
-THISURL=""
 apt install -y git stow zsh
-mkdir "$HOME"/git
-git clone "$THISURL" "$HOME"/git/dotfiles_termux
-"$HOME"/git/dotfiles_termux/home/install.sh
+mkdir "$HOME"/{git,.cache,.local/share,.config}
+git clone https://notabug.org/soredake/dotfiles_termux "$HOME"/git/dotfiles_termux
+"$HOME"/git/dotfiles_termux/scripts/home.sh
 chsh -s zsh

@@ -1,17 +1,6 @@
 # shellcheck disable=2034,2148
-# Tmux plugin settings
-export ZSH_TMUX_AUTOSTART=false
-export ZSH_TMUX_AUTOCONNECT=false
-export ZSH_TMUX_AUTOQUIT=false
-
 # Ranger settings
 export RANGER_LOAD_DEFAULT_RC=false
-
-# default pager
-export PAGER='less'
-
-# Don’t clear the screen after quitting a manual page.
-export MANPAGER="less -X"
 
 # Keep a short history.
 export HISTSIZE=500
@@ -39,4 +28,4 @@ export HISTFILE="$HOME/.cache/zsh/history"
 export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
 # Editor
-export EDITOR=vi
+export EDITOR=nvim

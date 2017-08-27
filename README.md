@@ -1,15 +1,11 @@
 # Home (aka: user's dotfiles)
 
-> These are my dotfiles. There are many like them, but these ones are mine.
-
-![Screenshot of susekaboss’s shell prompt](http://example.com/ADDIT.jpg)
-
 ## Usage
 
-* Clone this repo somewhere: `git clone https://github.com/fenque/home.git ~/Documents/github/home`
+* Clone this repo somewhere: `git clone https://notabug.org/soredake/dotfiles_termux ~/git/dotfile_termux`
 * To install run `./dotfiles.sh`
 * To update the dotfiles run `git pull && ./dotfiles.sh`
-* Alternatively, if you're setting up a fresh OS X install, use the `scripts/home.sh` script, which will set everything up and run all of the other scripts for you
+* Alternatively, if you're setting up a fresh termux install, use the `scripts/home.sh` script, which will set everything up and run all of the other scripts for you
 
 ## Customization
 

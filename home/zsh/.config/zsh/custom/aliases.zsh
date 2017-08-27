@@ -11,14 +11,8 @@ alias mv='mv -i';
 # better ls
 alias ls='ls --color=auto -ah'
 
-# Enable simple aliases to be sudo'ed. ("sudone"?)
-# http://www.gnu.org/software/bash/manual/bashref.html#Aliases says: "If the
-# last character of the alias value is a space or tab character, then the next
-# command word following the alias is also checked for alias expansion."
-alias sudo='sudo '
-
 # update everything
-alias update='apt update && apt upgrade && upgrade_oh_my_zsh'
+alias update='apt update && apt upgrade && zplug update'
 
 # What's my IP address.
 alias myip='dig +short myip.opendns.com @resolver1.opendns.com'

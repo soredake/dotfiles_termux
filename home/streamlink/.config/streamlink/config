@@ -1,1 +1,3 @@
 hls-segment-threads=10
+twitch-disable-hosting
+default-stream=best

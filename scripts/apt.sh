@@ -10,24 +10,22 @@ apt upgrade
 packages=(
     bc
     busybox
-    # neeeded to build pycryptodome
-    clang
+    clang # neeeded to build pycryptodome
     coreutils
     curl
+    fish
     git
     htop
     man
     mc
     neofetch
     nmap
-    nodejs
     openssh
     play-audio
     python
     ranger
     remind
     rsync
-    silversearcher-ag
     stow
     tmux
     unrar
