@@ -12,7 +12,7 @@ alias mv='mv -i';
 alias ls='ls --color=auto -ah'
 
 # update everything
-alias update='apt update && apt upgrade && zplug update'
+alias update='apt update && apt upgrade -y && zplug update'
 
 # What's my IP address.
 alias myip='dig +short myip.opendns.com @resolver1.opendns.com'

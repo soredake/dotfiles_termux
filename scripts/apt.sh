@@ -4,7 +4,7 @@
 apt update
 
 # Upgrade any already-installed packages.
-apt upgrade
+apt upgrade -y
 
 # Install other useful binaries.
 packages=(
@@ -13,6 +13,7 @@ packages=(
     clang # neeeded to build pycryptodome
     coreutils
     curl
+    dnsutils
     fish
     git
     htop
@@ -23,11 +24,13 @@ packages=(
     openssh
     play-audio
     python
+    procps
     ranger
     remind
     rsync
     stow
     tmux
+    termux-exec
     unrar
     unzip
     w3m
