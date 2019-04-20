@@ -10,7 +10,8 @@ apt upgrade -y
 packages=(
     bc
     busybox
-    #clang # neeeded to build pycryptodome
+    make
+    clang # neeeded to build pycryptodome and vitetris
     coreutils
     curl
     dnsutils

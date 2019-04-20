@@ -9,7 +9,7 @@ alias cp='cp -i';
 alias mv='mv -i';
 
 # better ls
-alias ls='ls --color=auto -ah'
+alias ls='ls --color=auto -ah --quoting-style=escape --group-directories-first'
 
 # update everything
 alias update='apt update; apt upgrade -y; zplugin update --all; yarn global upgrade'
@@ -23,5 +23,5 @@ alias whois='whois -h whois.internic.net'
 # tmux alias with xdg config location
 alias tmux='tmux -f $HOME/.config/tmux/tmux.conf'
 
-# i need a real su
+# i need real su
 alias su='/system/bin/su'

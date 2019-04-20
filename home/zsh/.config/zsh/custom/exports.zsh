@@ -21,11 +21,11 @@ export HISTTIMEFORMAT="${FG_BLUE}${FONT_BOLD}%Y/%m/%d %H:%M:%S${FONT_RESET}  "
 export HISTIGNORE="ls:cd:cd:ll:ls:la:history -:pwd:exit:date:* --help"
 
 # Zsh history file
-export HISTFILE="$HOME/.cache/zsh/history"
+export HISTFILE="$XDG_CACHE_HOME/zsh/history"
 
 # Make new shells get the history lines from all previous shells instead of the
 # default "last window closed" history.
 export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
 # Editor
-export EDITOR=nvim
+export EDITOR=nano
