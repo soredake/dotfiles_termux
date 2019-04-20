@@ -62,15 +62,15 @@ pathadd() {
   [[ -d "$1" ]] && [[ ":$PATH:" != *":$1:"* ]] && PATH="${PATH:+"$PATH:"}$1"
 }
 pathadd "$HOME/bin"
-pathadd /sbin
-pathadd /usr/sbin
+#pathadd /sbin
+#pathadd /usr/sbin
 
 # enable completion for hidden f{iles,olders}
 # https://unix.stackexchange.com/questions/308315/how-can-i-configure-zsh-completion-to-show-hidden-files-and-folders
 _comp_options+=(globdots)
 
 # shellcheck disable=1090
-for f in $HOME/.private/*; do . $f; done
+#for f in $HOME/.private/*; do . $f; done
 
 # Don't hash directories on the path a time, which allows new
 # binaries in $PATH to be executed without rehashing.
@@ -80,7 +80,7 @@ setopt nohashdirs
 unsetopt nomatch
 
 # Not autocomplete /etc/hosts, https://unix.stackexchange.com/questions/14155/ignore-hosts-file-in-zsh-ssh-scp-tab-complete
-zstyle ':completion:*:hosts' hosts off
+#zstyle ':completion:*:hosts' hosts off
 
 # https://stackoverflow.com/questions/14307086/tab-completion-for-aliased-sub-commands-in-zsh-alias-gco-git-checkout/20643204#20643204
 setopt COMPLETE_ALIASES
