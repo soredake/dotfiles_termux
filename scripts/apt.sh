@@ -10,7 +10,7 @@ apt upgrade -y
 packages=(
     bc
     busybox
-    clang # neeeded to build pycryptodome
+    #clang # neeeded to build pycryptodome
     coreutils
     curl
     dnsutils
