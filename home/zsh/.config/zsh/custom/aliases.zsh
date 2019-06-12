@@ -22,6 +22,3 @@ alias whois='whois -h whois.internic.net'
 
 # tmux alias with xdg config location
 alias tmux='tmux -f $HOME/.config/tmux/tmux.conf'
-
-# i need real su
-alias su='/system/bin/su'
