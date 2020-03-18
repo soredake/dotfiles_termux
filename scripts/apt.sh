@@ -10,12 +10,9 @@ apt upgrade -y
 packages=(
     bc
     busybox
-    make
-    clang # neeeded to build pycryptodome and vitetris
     coreutils
     curl
     dnsutils
-    fish
     git
     htop
     man
@@ -24,16 +21,17 @@ packages=(
     nmap
     openssh
     play-audio
-    python
     procps
+    python
     ranger
     remind
     rsync
     stow
-    tmux
     termux-exec
+    tmux
     unrar
     unzip
+    vitetris
     w3m
     zsh
 )
