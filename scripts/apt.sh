@@ -8,31 +8,22 @@ apt upgrade -y
 
 # Install other useful binaries.
 packages=(
-    bc
-    busybox
-    coreutils
-    curl
-    dnsutils
-    git
-    htop
-    man
-    mc
-    neofetch
-    nmap
-    openssh
-    play-audio
-    procps
-    python
-    ranger
-    remind
-    rsync
-    stow
-    termux-exec
-    tmux
-    unrar
-    unzip
-    vitetris
-    w3m
-    zsh
+  busybox
+  coreutils
+  curl
+  fish
+  git
+  htop
+  man
+  mc
+  neofetch
+  openssh
+  rsync
+  stow
+  termux-exec
+  unrar
+  unzip
+  vitetris
+  w3m
 )
 apt install -y "${packages[@]}"
