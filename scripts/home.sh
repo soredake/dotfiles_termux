@@ -8,3 +8,5 @@ cd "$SD" || exit 1
 
 # Stow home
 ../home/install.sh
+
+termux-setup-storage
