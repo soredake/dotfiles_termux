@@ -7,9 +7,6 @@ pkg upgrade
 packages=(
   fish
   git
-  htop
-  openssh
-  rsync
   stow
   vitetris
 )
